@@ -1,0 +1,18 @@
+
+
+Although often used interchangeably, confounds and artifacts refer to two different kinds of threat to the validity of social psychological research.
+
+Within a given social psychological experiment, researchers are attempting to establish a relationship between a treatment (also known as an independent variable or a predictor) and an outcome (also known as a dependent variable or a criterion). Usually, but not always, they are trying to prove that the treatment causes the outcome, that differential levels of the treatment lead to differential levels of the outcome.
+
+==Confounds==
+Confounds are threats to internal validity. Confounds refer to variables that should have been held constant within a specific study but that were accidentally allowed to vary (and covary with the independent/predictor variable). A confound exists when the treatment influences the outcome, but not for the theoretical reason proposed by the researchers. Confounds may be related to the “reactivity” of the study (e.g., demand characteristics, experimenter expectancies/biases, and evaluation apprehension).
+
+Suggestions for minimizing confounds include telling participants a believable and coherent cover story (to reduce demand characteristics or to attempt to keep them constant across conditions) and keeping researchers, research assistants, and others who have contact with participants “blind” to the experimental condition to which participants are assigned (to minimize experimenter expectancies/biases).
+
+==Artifacts==
+Artifacts, on the other hand, refer to variables that should have been systematically varied, either within or across studies, but that were accidentally held constant. Artifacts are thus threats to external validity. Artifacts are factors that covary with the treatment and the outcome. Campbell and Stanley identify several artifacts. The major threats to internal validity are history, maturation, testing, instrumentation, statistical regression, selection, experimental mortality, and selection-history interactions.
+
+One way to minimize the influence of artifacts is to use a pretest-posttest control group design. Within this design, “groups of people who are initially equivalent (at the pretest phase) are randomly assigned to receive the experimental treatment or a control condition and then assessed again after this differential experience (posttest phase)”. Thus, any effects of artifacts are (ideally) equally distributed in participants in both the treatment and control condition.
+
+==References==
+* 

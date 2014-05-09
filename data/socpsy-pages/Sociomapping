@@ -1,0 +1,69 @@
+Sociomapping is a method developed for processing and visualization of relational data (e.g. social network data). It uses the data-landscape metaphor, creating a visually coded picture resembling a map that can be interpreted with similar rules as navigation in the landscape. This picture is called a Sociomap.
+
+Due to its visual coding Sociomapping enables usage of learned skills for spatial orientation and movement detection, which people use in everyday life. It allows simple monitoring of changes in the mapped system by visual comparison of two Sociomaps.
+
+==Basic principle==
+The basic principle of Sociomapping is transformation of relational data into visual format called Sociomap. The quality of Sociomap can be evaluated by the quality index that reflects how well the distances in data were replicated to distances in the Sociomap.
+
+==Application==
+There are two main application areas for Sociomapping - groups (small systems) and populations (large systems). Different system of visualization is used in both areas, optimizing the ability to understand and interpret the analyzed data.
+
+===Groups and small systems Sociomapping===
+Sociomapping for small systems produces Sociomaps of subjects. These subjects (in most cases people) are placed on the Sociomap reflecting their distance measured in various ways:
+* social distance
+* psychological distance (psychological similarity)
+* communication distance
+* other relation measures
+
+Besides the distances between the group members, Sociomap shows additional variable coded in the height (or color) of the subject. Typical variables used for the height are: social status, performance indicators of the subjects, average communication frequency, etc.
+
+Understanding the relative distances between the people helps to understand the structure of the group, find subgroups formed by groups members and discover functions of the group members. In connection to the height Sociomap enables complex and comprehensive insight into the groups and small systems.
+
+Sociomapping of small systems produces similar results to Social network analysis with additional visualization features.
+
+===Profile analysis===
+Besides the small systems analysis based on various relational data, Sociomapping can be used to visualize the profiles of unrelated subjects. This is done by transformation of profiles of the subjects, computing the distances between the profiles and visualizing them in a Sociomap.
+There is a software to compute Profile analysis (see section Sociomapping software)
+
+===Populations and Large systems Sociomapping===
+For large systems and populations, different type of Sociomaps is used. Data used for these type of maps are rectangular matrices, where for each subject there is a preference vector of selected objects (such as political parties, brands, products, and so on). 
+In order to create a Sociomap, for each subject a position in the map is determined, and a small piece of mass representing this subject is placed on the map according to its vector of preferences to an object. As a result, there are places on the Sociomap where more subject are placed (hills) and where there are no subject (valleys). Therefore, hills are formed on the places representing typical preference configurations and this allows for visual cluster analysis, or segmentation.
+In this sense, Large systems Sociomapping is a data mining approach based on visual pattern recognition).
+
+Typical uses for Large systems Sociomapping are:
+* political research (preferences and polls)
+* marketing research (attitudes and product preferences)
+* customer segmentation (behavioral patterns)
+* and other research concerned with preferences and/or attitudes.
+
+==Broader scope of application==
+Sociomapping has broader scope of application, including the following fields:
+
+*Historical events analysis (e.g. RMS Titanic survival rate)
+*Internet community tools (e.g. Last.fm [http://qed-portal.com/en/last_fm/tool/] profile similarity)
+*Literature analysis (e.g. analysis of communication in Shakespeare plays)
+*Military units and human spaceflight crews analysis
+*Sport analysis and forecast (e.g. cooperation of sport teams)
+*Politics analysis and forecast
+*Team building
+*Team analysis (communication, cooperation, decision-making)
+
+==Software==
+
+So far only one software tool based on Sociomapping was released.
+
+Team profile analyzer [http://www.teamprofileanalyzer.com/] is a tool for psychologists, consultants, managers and HR specialists. It enables integration of various sources of information about team from personality, performance or knowledge tests and biographical data. It can be used for team analysis and development: team coaching, team building, recruitment etc.
+
+==See also==
+*Sociometry
+*Marketing research
+*High Performance Teams
+*Team management
+*Human Resources
+
+==References==
+* Sociomapping Portal with information and resources about Sociomapping
+* The Application of Sociomapping to Executive Team Development
+* Utilization of multilayer network data of team for Sociomapping analysis
+
+

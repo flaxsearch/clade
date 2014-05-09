@@ -1,0 +1,47 @@
+Common coding theory is a cognitive psychology theory describing how perceptual representations (e.g. of things we can see and hear) and motor representations (e.g. of hand actions) are linked. The theory claims that there is a shared representation (a common code) for both perception and action. More important, seeing an event activates the action associated with that event, and performing an action activates the associated perceptual event.
+
+The idea of direct perception - actions links originates in the work of the American psychologist William James and more recently, American neurophysiologist and Nobel prize winner Roger Sperry. Sperry argued that the perception–action cycle is the fundamental logic of the nervous system Perception and action processes are functionally intertwined: perception is a means to action and action is a means to perception. Indeed, the vertebrate brain has evolved for governing motor activity with the basic function to transform sensory patterns into patterns of motor coordination.
+
+==Background==
+The classical approach to cognition is a 'sandwich' model which assumes three stages of information processing: perception, cognition and then action. In this model, perception and action do not interact directly, instead cognitive processing is needed to convert perceptual representations into action. For example, this might require creating arbitrary linkages (mapping between sensory and motor codes).
+
+In contrast, the common coding account claims that perception and action are directly linked by a common computational code. 
+
+This theory, put forward by German scientist Wolfgang Prinz and his colleagues from the Max Planck Institute, claims parity between perception and action. Its core assumption is that actions are coded in terms of the perceivable effects (i.e., the distal perceptual events) they should generate. This theory also states that perception of an action should activate action representations to the degree that the perceived and the represented action are similar. Such a claim suggests that we represent observed, executed and imagined actions in a commensurate manner and makes specific predictions regarding the nature of action and perceptual representations. First, representations for observed and executed actions should rely on a shared neural substrate. Second, a common cognitive system predicts facilitation of action based on directly prior perception and vice versa. Third, such a system predicts interference effects when action and perception attempt to access shared representations simultaneously.
+
+==Evidence for common coding==
+In the past decade, a growing number of results have been interpreted in favor of the common coding theory. 
+
+For instance, one functional MRI study demonstrated that the brain’s response to the 2/3 power law of motion (i.e., which dictates a strong coupling between movement curvature and velocity) is much stronger and more widespread than to other types of motion. Compliance with this law was reflected in the activation of a large network of brain areas subserving motor production, visual motion processing, and action observation functions. These results support the common coding and the notion of similar neural coding for motion perception and production.
+
+One of the most direct evidence for common coding in the brain now stems from the fact that pattern classifiers that can differentiate based on brain activity whether someone has performed action A or B can also classify, above chance, whether that person heard the sound of action A or B, thereby demonstrating that action execution and perception are represented using a common code 
+
+Recently, the common coding theory received increased interest from researchers in developmental psychology, cognitive neuroscience, robotics, and social psychology.
+
+==Commensurate representation==
+Common coding posits, on top of separate coding, further domains of representation in which afferent and efferent information share the same format and dimensionality of representation. Common coding refers to ‘late’ afferent representations (referring to events in the environment) and ‘early’ efferent representations (referring to intended events). Such representations are commensurate since they both exhibit distal reference. They permit creating linkages between perception and action that do not rely on arbitrary mappings. Common coding conceives action planning in terms of operations that determine intended future events from given current events (matching between event codes and action codes). In particular perception and action may modulate each other by virtue of similarity. Unlike rule-based mapping of incommensurate codes which requires preceding acquisition of mapping rules, similarity-based matching of commensurate codes requires no such preceding rule acquisition.
+
+==Ideomotor principle==
+In line with the ideomotor theory of William James (1890) and Hermann Lotze (1852), the common coding theory posits that actions are represented in terms of their perceptual consequences. Actions are represented like any other events, the sole distinctive feature being that they are (or can be) generated through bodily movements. Perceivable action consequences may vary on two major dimensions: resident vs. remote effects, and ‘cool’ versus ‘hot’ outcomes (i.e., reward values associated with action outcomes).
+
+When individuals perform actions they learn what their movements lead to (Ideomotor learning). The ideomotor theory claims that these associations can also be used in the reverse order (cf. William James, 1890 II, p. 526): When individuals perceive events of which they know (from previous learning) that they may result from certain movements, perception of these events may evoke the movements leading to them (Ideomotor control). The distinction between learning and control is equivalent to the distinction between forward and inverse computation in motor learning and control. Ideomotor learning supports prediction and anticipation of action outcomes, given current action. Ideomotor control supports selection and control of action, given intended outcomes.
+
+==Related approaches==
+While most traditional approaches tend to stress the relative independence of perception and action, some theories have argued for closer links. Motor theories of speech and action perception have made a case for motor contributions to perception. Close non-representational connections between perception and action have also been claimed by ecological approaches.
+Today common coding theory is closely related to research and theory in two intersecting fields of study: Mirror neurons systems and embodied cognition. As concerns mirror systems, common coding seems to reflect the functional logic of mirror neurons and mechanisms in the brain. As concerns embodied cognition, common coding is compatible with the claim that meaning is embodied, i.e. grounded in perception and action.
+
+==Further reading==
+* Morsella, E., Bargh, J.A., & Gollwitzer, P.M. (Eds.) (2009). Oxford Handbook of Human Action. New York: Oxford University Press.
+* Roessler, J., & Eilan, N. (Eds.) (2003). Agency and self-awareness. New York: Oxford University Press.
+
+==References==
+==See also==
+* Motor cognition
+* Mental Practice of Action
+* Motor imagery
+* Neuroscience
+* Empathy
+* Affective neuroscience
+* Social cognition
+
+

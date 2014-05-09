@@ -1,0 +1,139 @@
+
+
+
+Social network analysis (SNA) is the methodical analysis of social networks. Social network analysis views social relationships in terms of network theory consisting of "nodes" (representing individual actors within the network) and "connections" or "links" (which represent relationships between the individuals, such as friendship, kinship, organizational position, sexual relationships, etc.) These networks are often depicted in a social network diagram, where nodes are the points and ties are the lines.
+
+==Overview==
+
+Where traditional social scientific studies assume that it is the attributes of individual actors that matter, social network analysis focuses on the relationships and ties "between" actors within the network.
+
+Social network analysis (related to "network theory") has emerged as a key technique in modern sociology. It has also gained a significant following in anthropology, biology, communication studies, economics, geography, information science, organizational studies, social psychology, and sociolinguistics, and has become a popular topic of speculation and study.
+
+People have used the idea of "social network" loosely for over a century to connote complex sets of relationships between members of social systems at all scales, from interpersonal to international. In 1954, J. A. Barnes started using the term systematically to denote patterns of ties, encompassing concepts traditionally used by the public and those used by social scientists: bounded groups (e.g., tribes, families) and social categories (e.g., gender, ethnicity). Scholars such as S.D. Berkowitz, Stephen Borgatti, Ronald Burt, Kathleen Carley, Martin Everett, Katherine Faust, Linton Freeman, Mark Granovetter, David Knoke, David Krackhardt, Peter Marsden, Nicholas Mullins, Anatol Rapoport, Stanley Wasserman, Barry Wellman, Douglas R. White, and Harrison White expanded the use of systematic social network analysis.
+
+Social networks have also been used to examine how organizations interact with each other, characterizing the many informal connections that link executives together, as well as associations and connections between individual employees at different organizations. For example, power within organizations often comes more from the degree to which an individual within a network is at the center of many relationships than actual job title. Social networks also play a key role in hiring, in business success, and in job performance. Networks provide ways for companies to gather information, deter competition, and collude in setting prices or policies.
+
+==Historical development==
+Social network analysis, as a field, has been in development since the 1930s. In the 1930s, J.L. Moreno pioneered the systematic recording and analysis of social interaction in small groups, especially classrooms and work groups (sociometry), while a Harvard group led by W. Lloyd Warner and Elton Mayo explored interpersonal relations at work. In 1940, A.R. Radcliffe-Brown's presidential address to British anthropologists urged the systematic study of networks.
+
+Social network analysis developed with the kinship studies of Elizabeth Bott in England in the 1950s and the 1950s–1960s urbanization studies of the University of Manchester group of anthropologists (centered around Max Gluckman and later J. Clyde Mitchell) investigating community networks in southern Africa, India and the United Kingdom. Concomitantly, British anthropologist S.F. Nadel codified a theory of social structure that was influential in later network analysis.
+
+In the 1960s-1970s, a growing number of scholars worked to combine the different tracks and traditions. One group was centered around Harrison White and his students at the Harvard University Department of Social Relations: Ivan Chase, Bonnie Erickson, Harriet Friedmann, Mark Granovetter, Nancy Howell, Joel Levine, Nicholas Mullins, John Padgett, Michael Schwartz and Barry Wellman. Also independently active in the Harvard Social Relations department at the time were Charles Tilly, who focused on networks in political and community sociology and social movements, and Stanley Milgram, who developed the "six degrees of separation" thesis. Mark Granovetter and Barry Wellman are among the former students of White who have elaborated and popularized social network analysis.
+
+Significant independent work was also done by scholars elsewhere: University of California Irvine social scientists interested in mathematical applications, centered around Linton Freeman, including John Boyd, Susan Freeman, Kathryn Faust, A. Kimball Romney and Douglas White; quantitative analysts at the University of Chicago, including Joseph Galaskiewicz, Wendy Griswold, Edward Laumann, Peter Marsden, Martina Morris, and John Padgett; and communication scholars at Michigan State University, including Nan Lin and Everett Rogers. A substantively-oriented University of Toronto sociology group developed in the 1970s, centered on former students of Harrison White: S.D. Berkowitz, Harriet Friedmann, Nancy Leslie Howard, Nancy Howell, Lorne Tepperman and Barry Wellman, and also including noted modeler and game theorist Anatol Rapoport. In terms of theory, it critiqued methodological individualism and group-based analyses, arguing that seeing the world as social networks offered more analytic leverage.
+
+==Metrics (measures) in social network analysis==
+;Bridges: An edge is said to be a bridge if deleting it would cause its endpoints to lie in different components of a graph.
+
+;Centrality: Centrality refers to a group of metrics that aim to quantify the "importance" or "influence" (in a variety of senses) of a particular node (or group) within a network. Examples of common methods of measuring "centrality" include betweenness centrality, closeness centrality, eigenvector centrality, alpha centrality and degree centrality.
+
+;Clustering coefficient: A measure of the likelihood that two associates of a node are associates themselves. A higher clustering coefficient indicates a greater 'cliquishness'.
+
+;Cohesion: The degree to which actors are connected directly to each other by cohesive bonds. Groups are identified as ‘cliques’ if every individual is directly tied to every other individual, ‘social circles’ if there is less stringency of direct contact, which is imprecise, or as structurally cohesive blocks if precision is wanted. Structural cohesion refers to the minimum number of members who, if removed from a group, would disconnect the group.
+
+;Density: Density measures the proportion of ties in a network relative to the total number possible
+
+==Modelling and visualization of networks==
+Visual representation of social networks is important to understand the network data and convey the result of the analysis [http://www.cmu.edu/joss/content/articles/volume1/Freeman.html]. Many of the analytic software have modules for network visualization. Exploration of the data is done through displaying nodes and ties in various layouts, and attributing colors, size and other advanced properties to nodes. Visual representations of networks may be a powerful method for conveying complex information, but care should be taken in interpreting node and graph properties from visual displays alone, as they may misrepresent structural properties better captured through quantitative analyses.
+
+Collaboration graphs can be used to illustrate good and bad relationships between humans. A positive edge between two nodes denotes a positive relationship (friendship, alliance, dating) and a negative edge between two nodes denotes a negative relationship (hatred, anger). Signed social network graphs can be used to predict the future evolution of the graph. In signed social networks, there is the concept of "balanced" and "unbalanced" cycles. A balanced cycle is defined as a cycle where the product of all the signs are positive. Balanced graphs represent a group of people who are unlikely to change their opinions of the other people in the group. Unbalanced graphs represent a group of people who are very likely to change their opinions of the people in their group. For example, a group of 3 people (A, B, and C) where A and B have a positive relationship, B and C have a positive relationship, but C and A have a negative relationship is an unbalanced cycle. This group is very likely to morph into a balanced cycle, such as one where B only has a good relationship with A, and both A and B have a negative relationship with C. By using the concept of balances and unbalanced cycles, the evolution of signed social network graphs can be predicted.
+
+Especially when using social network analysis as a tool for facilitating change, different approaches of participatory network mapping have proven useful. Here participants / interviewers provide network data by actually mapping out the network (with pen and paper or digitally) during the data collection session. One benefit of this approach is that it allows researchers to collect qualitative data and ask clarifying questions while the network data is collected.
+
+==Notable theories==
+The small world phenomenon is the hypothesis that the chain of social acquaintances required to connect one arbitrary person to another arbitrary person anywhere in the world is generally short. The concept gave rise to the famous phrase six degrees of separation after a 1967 "small world experiment" by psychologist Stanley Milgram. In Milgram's experiment, a sample of US individuals were asked to reach a particular target person by passing a message along a chain of acquaintances. The average length of successful chains turned out to be about five intermediaries or six separation steps (the majority of chains in that study actually failed to complete). The methods (and ethics as well) of Milgram's experiment were later questioned by an American scholar, and some further research to replicate Milgram's findings found that the degrees of connection needed could be higher. Academic researchers continue to explore this phenomenon as Internet-based communication technology has supplemented the phone and postal systems available during the times of Milgram. A recent electronic small world experiment at Columbia University found that about five to seven degrees of separation are sufficient for connecting any two people through e-mail.
+
+Mark Granovetter found in one study that more numerous weak ties can be important in seeking information and innovation. Cliques have a tendency to have more homogeneous opinions as well as share many common traits. This homophilic tendency was the reason for the members of the cliques to be attracted together in the first place. However, being similar, each member of the clique would also know more or less what the other members knew. To find new information or insights, members of the clique will have to look beyond the clique to its other friends and acquaintances. This is what Granovetter called "the strength of weak ties".
+
+One study has found that happiness tends to be correlated in social networks. When a person is happy, nearby friends have a 25 percent higher chance of being happy themselves. Furthermore, people at the center of a social network tend to become happier in the future than those at the periphery. Clusters of happy and unhappy people were discerned within the studied networks, with a reach of three degrees of separation: a person's happiness was associated with the level of happiness of their friends' friends' friends.
+
+Guanxi (关系）is a central concept in Chinese society (and other East Asian cultures) that can be summarized as the use of personal influence. The word is usually translated as "relation," "connection" or "tie" and is used in as broad a variety of contexts as are its English counterparts. However, in the context of interpersonal relations, Guanxi (关系）is loosely analogous to "clout" or "pull" in the West. Guanxi can be studied from a social network approach.
+
+The shape of a social network helps determine a network's usefulness to its individuals. Smaller, tighter networks can be less useful to their members than networks with a lot of loose connections (weak ties) to individuals outside the main network. More open networks, with many weak ties and social connections, are more likely to introduce new ideas and opportunities to their members than closed networks with many redundant ties. In other words, a group of friends who only do things with each other already share the same knowledge and opportunities. A group of individuals with connections to other social worlds is likely to have access to a wider range of information. It is better for individual success to have connections to a variety of networks rather than many connections within a single network. Similarly, individuals can exercise influence or act as brokers within their social networks by bridging two networks that are not directly linked (called filling structural holes).
+
+==Patents==
+ has been rapid growth in the number of US patent applications that cover new technologies related to social networking. The number of published applications has been growing at about 250% per year over the past five years. There are now over 7000 published applications. Only about 100 of these applications have been issued as patents, however, largely due to the multi-year backlog in examination of business method patents.
+
+==See also==
+* Complex Network
+* Community structure
+* Dynamic network analysis
+* Friendship paradox
+* Graph theory
+* Mathematical sociology
+* Metcalfe's Law
+* Network science
+* Organizational patterns
+* Small world phenomenon
+* Social networking service
+* Social software
+* Social web
+
+==References==
+
+==Further reading==
+* Berkowitz, Stephen D. 1982. "An Introduction to Structural Analysis: The Network Approach to Social Research." Toronto: Butterworth. ISBN 0-409-81362-1
+* Brandes, Ulrik, and Thomas Erlebach (Eds.). 2005. "Network Analysis: Methodological Foundations" Berlin, Heidelberg: Springer-Verlag.
+* Breiger, Ronald L. 2004. "The Analysis of Social Networks." Pp. 505–526 in "Handbook of Data Analysis," edited by Melissa Hardy and Alan Bryman. London: Sage Publications. ISBN 0-7619-6652-8 "Excerpts in pdf format"
+* Burt, Ronald S. (1992). "Structural Holes: The Structure of Competition." Cambridge, MA: Harvard University Press. ISBN 0-674-84372-X
+* Casaleggio, Davide (2008). "TU SEI RETE. La Rivoluzione del business, del marketing e della politica attraverso le reti sociali." ISBN 88-901826-5-2
+* Carrington, Peter J., John Scott and Stanley Wasserman (Eds.). 2005. "Models and Methods in Social Network Analysis." New York: Cambridge University Press. ISBN 978-0-521-80959-7
+* Christakis, Nicholas and James H. Fowler "The Spread of Obesity in a Large Social Network Over 32 Years," "New England Journal of Medicine" 357 (4): 370–379 (26 July 2007)
+* Doreian, Patrick, Vladimir Batagelj, and Anuška Ferligoj. (2005). "Generalized Blockmodeling." Cambridge: Cambridge University Press. ISBN 0-521-84085-6
+* Freeman, Linton C. (2004) "The Development of Social Network Analysis: A Study in the Sociology of Science." Vancouver: Empirical Press. ISBN 1-59457-714-5
+* Hill, R. and Dunbar, R. 2002. "Social Network Size in Humans." Human Nature, Vol. 14, No. 1, pp. 53–72.
+* pdf
+* Huisman, M. and Van Duijn, M. A. J. (2005). Software for Social Network Analysis. In P J. Carrington, J. Scott, & S. Wasserman (Editors), "Models and Methods in Social Network Analysis" (pp. 270–316). New York: Cambridge University Press. ISBN 978-0-521-80959-7
+* Krebs, Valdis (2006) Social Network Analysis, A Brief Introduction. (Includes a list of recent SNA applications Web Reference.)
+* Ligon, Ethan; Schechter, Laura, "The Value of Social Networks in rural Paraguay", University of California, Berkeley, Seminar, March 25, 2009, Department of Agricultural & Resource Economics, College of Natural Resources, University of California, Berkeley
+* Lima, Francisco W. S., Hadzibeganovic, Tarik, and Dietrich Stauffer (2009). Evolution of ethnocentrism on undirected and directed Barabási-Albert networks. Physica A, 388(24), 4999–5004.
+* Lin, Nan, Ronald S. Burt and Karen Cook, eds. (2001). "Social Capital: Theory and Research." New York: Aldine de Gruyter. ISBN 0-202-30643-7
+* Mullins, Nicholas. 1973. "Theories and Theory Groups in Contemporary American Sociology." New York: Harper and Row. ISBN 0-06-044649-8
+* Müller-Prothmann, Tobias (2006): Leveraging Knowledge Communication for Innovation. Framework, Methods and Applications of Social Network Analysis in Research and Development, Frankfurt a. M. et al.: Peter Lang, ISBN 0-8204-9889-0.
+* via JSTOR
+* Moody, James, and Douglas R. White (2003). "Structural Cohesion and Embeddedness: A Hierarchical Concept of Social Groups." "American Sociological Review" 68(1):103–127. [http://www2.asanet.org/journals/ASRFeb03MoodyWhite.pdf]
+* pdf
+* Nohria, Nitin and Robert Eccles (1992). "Networks in Organizations." second ed. Boston: Harvard Business Press. ISBN 0-87584-324-7
+* Nooy, Wouter d., A. Mrvar and Vladimir Batagelj. (2005). "Exploratory Social Network Analysis with Pajek." Cambridge: Cambridge University Press. ISBN 0-521-84173-9
+* Scott, John. (2000). "Social Network Analysis: A Handbook." 2nd Ed. Newberry Park, CA: Sage. ISBN 0-7619-6338-3
+* Sethi, Arjun. (2008). "Valuation of Social Networking" [http://fusion.dalmatech.com/%7Eadmin24/files/socialnetworkvaluation.pdf]
+* Tilly, Charles. (2005). "Identities, Boundaries, and Social Ties." Boulder, CO: Paradigm press. ISBN 1-59451-131-4
+* Valente, Thomas W. (1995). "Network Models of the Diffusion of Innovations." Cresskill, NJ: Hampton Press. ISBN 1-881303-21-7
+* Wasserman, Stanley, & Faust, Katherine. (1994). "Social Network Analysis: Methods and Applications." Cambridge: Cambridge University Press. ISBN 0-521-38269-6
+* Watkins, Susan Cott. (2003). "Social Networks." Pp. 909–910 in "Encyclopedia of Population." rev. ed. Edited by Paul George Demeny and Geoffrey McNicoll. New York: Macmillan Reference. ISBN 0-02-865677-6
+* Watts, Duncan J. (2003). "Small Worlds: The Dynamics of Networks between Order and Randomness." Princeton: Princeton University Press. ISBN 0-691-11704-7
+* Watts, Duncan J. (2004). "Six Degrees: The Science of a Connected Age." W. W. Norton & Company. ISBN 0-393-32542-3
+* Wellman, Barry (1998). "Networks in the Global Village: Life in Contemporary Communities." Boulder, CO: Westview Press. ISBN 0-8133-1150-0
+* Wellman, Barry and Berkowitz, Stephen D. (1988). "Social Structures: A Network Approach." Cambridge: Cambridge University Press. ISBN 0-521-24441-2
+* Weng, M. (2007). "A Multimedia Social-Networking Community for Mobile Devices" Interactive Telecommunications Program, Tisch School of the Arts/ New York University
+
+==External links==
+<!--======================== ============================
+
+
+
+*Introduction to Stochastic Actor-Based Models for Network Dynamics - Snijder et al.
+* The International Network for Social Network Analysis (INSNA) – professional society of social network analysts, with more than 1,000 members
+* Center for Computational Analysis of Social and Organizational Systems (CASOS) at Carnegie Mellon
+* NetLab at the University of Toronto, studies the intersection of social, communication, information and computing networks
+* Netwiki (wiki page devoted to social networks; maintained at University of North Carolina at Chapel Hill)
+* Building networks for learning – A guide to on-line resources on strengthening social networking.
+* Program on Networked Governance – Program on Networked Governance, Harvard University
+* The International Workshop on Social Network Analysis and Mining (SNAKDD) - An annual workshop on social network analysis and mining, with participants from computer science, social science, and related disciplines.
+* Historical Dynamics in a time of Crisis: Late Byzantium, 1204–1453 (a discussion of social network analysis from the point of view of historical studies)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+
+Information integration theory, was proposed by Norman H. Anderson to describe and model how a person integrates information from a number of sources in to make an overall judgment. The theory proposes three functions. 
+
+The "valuation function" V(S) is an empirically derived mapping of stimuli to an interval scale. It is unique up to an interval transformation (y = ax + b).
+
+The "integration function" r = I{s1,s2, .. ,sn} is an algebraic function combining the subjective values of the information. "Cognitive algebra" refers to the class of functions that are used to model the integration process. They may be adding, averaging, weighted averaging, multiplying, etc.
+
+The "response production function" R = M(r) is the process by which the internal impression is translated into an overt response.
+
+Information integration theory differs from other theories in that it is not erected on a consistency principle such as balance or congruity but rather relies on algebraic models.
+The theory is also referred to as functional measurement, because it can provide validated scale values of the stimuli. 
+An elementary treatment of the theory, along with a Microsoft Windows program for carrying out functional measurement analysis, is provided in the textbook by David J. Weiss.
+
+== Integration models ==
+There are three main types of algebraic models used in information integration theory: adding, averaging, and multiplying.
+
+Adding models
+R = reaction/overt behavior
+F/G = contributing factors
+
+R1 = F1 + G1 (Condition 1)
+R2 = F2 + G2 (Condition 2)
+
+Typically an experiment is designed so that: 
+R1 = R2, and
+F1 > F2, so that
+G1 < G2
+
+There are two special cases known as discounting and augmentation. 
+
+Discounting: The value of any factor is reduced if other factors that produce the same effect are added.
+Example: F2 is not present or has a value of zero. If F1 is positive, then G1 must be less than G2.
+
+Augmentation: An inverse version of the typical model.
+Example: If F1 is negative, then G1 must be greater than G2
+
+Two advantages of adding models; (1) Participants are not required to have an exact intuitive calculation, (2) The adding model itself need not be completely valid. Certain kinds of interaction among the factors would not affect the qualitative conclusions.
+
+==References==
+
+*Anderson, N. H. Application of an Additive Model to Impression Formation. "Science", 1962, 138, 817–818
+*Anderson, N. H. On the Quantification of Miller's Conflict Theory. "Psychological Review", 1962, 69, 400–414
+*Anderson, N. H. A Simple Model for Information Integration. In R.P. Abelson, E. Aronson, W.J. McGuire, T.M. Newcomb, M.J. Rosenberg, & P.H. Tannenbaum (Eds.), "Theories of Cognitive Consistency: A Sourcebook." Chicago: Rand McNally, 1968
+*Anderson, N. H. Functional Measurement and Psychophysical Judgment. "Psychological Review", 1970, 77, 153- 170.
+*Anderson, N. H. Integration Theory and Attitude Change. "Psychological Review", 1971, 78, 171–206.
+*Anderson, N. H. (1981). "Foundation of information integration theory". New York: Academic Press.
+*Norman, K. L. (1973). "A method of maximum likelihood estimation for information integration models". (CHIP No. 35). La Jolla, California: University of California, San Diego, Center for Human Information Processing.
+*Norman, K. L. (1976). A solution for weights and scale values in functional measurement. "Psychological Review, 83", 80–84.
+*Weiss, D. J. (2006). "Analysis of variance and functional measurement: A practical guide." New York: Oxford University Press.
+==External links==
+*Stimulus Integration Models Iterated for Likelihood Estimates
+
+

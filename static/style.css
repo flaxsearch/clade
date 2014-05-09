@@ -1,0 +1,337 @@
+body {
+	font-size: 10px;
+	width: 997px;
+	height: 630px;
+}
+
+#back {
+	font-size: 14px;
+}
+
+#help {
+	font-size: 14px;
+	padding-top: 80px;
+	padding-left: 20px;
+	width: 950px;
+}
+
+#header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1000px;
+	height: 85px;
+	background: #004b85;
+}
+
+#header h1 {
+	height: 100%;
+	font-size: 32px;
+	color: white;
+	margin: 0;
+	padding: 20px 0px 0px 80px;	
+}
+
+#header img {
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	border: 0;
+}
+
+#header a.menu {
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+	font-size: 14px;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 2px;
+}
+
+#header a.flaxlink {
+	position: absolute;
+	left: 80px;
+	bottom: 5px;
+	font-size: 14px;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 2px;
+}
+
+
+#header button {
+	position: absolute;
+	right: 50px;
+	bottom: 3px;
+}
+
+.left {
+	position: absolute;
+	left: 4px;
+	width: 480px;
+}
+
+.right {
+	position: absolute;
+	left: 494px;
+	width: 500px;
+}
+
+#category, #title {
+	top: 95px;
+	font-size: 12px;
+	padding-bottom: 2px;
+	padding-top: 2px;
+}
+
+#category span, #title span {
+    padding-left: 5px;
+}
+
+#category .name, #title .id {
+    font-weight: bold
+}
+
+#category .count {
+    float: right;
+    padding-right: 5px;
+}
+
+
+#taxonomies.docview, #taxonomy.docview, #keywords.docview, #suggestions.docview, #documents.docview, #category.docview {
+	display: none;
+}
+
+#ranked.catview, #dockeywords.catview, #metadata.catview, #document.catview, #title.catview {
+	display: none;
+}
+
+#taxonomies {
+	top: 95px;
+}
+
+#taxonomies input {
+	height: 21px;
+	color: black;
+	width: 200px;
+	padding-left: 4px;
+}
+
+@-moz-document url-prefix() {
+	#taxonomies input {
+		height: 22px;
+	}
+}
+
+#taxonomy {
+	top: 135px;
+	height: 500px;
+	overflow-y: auto;
+}
+
+#taxonomy div {
+	margin: 2px;
+}
+
+#taxonomy li {
+	min-height: 22px;
+	line-height: 22px;
+}
+
+#taxonomy a {
+	line-height: 20px;
+	height: 20px;
+}
+
+#taxonomy a ins {
+	height: 20px;
+	width: 20px;
+	background-position: -56px -17px;
+}
+
+.contextmenu {
+	line-height: 20px;
+	width: 120px;
+	padding: 5px;
+}
+
+.contextmenu a:hover {
+	color: blue;
+}
+
+#keywords, #suggestions, #dockeywords {
+	top: 125px;
+}
+
+#keywords, #suggestions {
+	height: 185px;
+	width: 245px;
+}
+
+#dockeywords {
+	height: 120px;
+	width: 500px;
+}
+
+#dockeywords table {
+	margin : auto;
+}
+
+#dockeywords .column0 {
+	width: 250px;
+	padding-left: 8px;
+}
+
+#dockeywords .column1 {
+	width: 60px;
+}
+
+#taxonomyIcons {
+    background: lightgrey;
+    height: 17px;
+    padding: 1px 1px 0px 10px;
+}
+
+#keywords, #suggestions, #documents, #dockeywords, #metadata, #document {
+	overflow-y: auto;
+}
+
+#suggestions {
+	margin-left: 255px;
+}
+
+#keywords td.column0, #suggestions td.column0 {
+	padding-left: 10px;
+}
+
+table {
+	width: 100%;
+}
+
+table.selectable td {
+    cursor: pointer;
+}
+
+table.selectable th {
+    cursor: default;
+}
+
+table.selectable tr:hover {
+    background: #e7f4f9;
+}
+
+table.selectable tr.selected {
+    background: #beebff;
+}
+
+table.selectable th button, #taxonomyIcons button {
+    float: right;
+	width: 16px;
+	height: 16px;
+}
+
+.keywordInput {
+	width: 100px;
+	border: 0;
+	margin: 0;
+	background: yellow;
+}
+
+#documents {
+	top: 320px;
+	height: 320px;
+}
+
+#documents table {
+	margin: 0;
+}
+
+#documents .column0 {
+	width: 50px;
+}
+
+#documents td.column0, #documents td.column2, #documents td.column3 {
+	text-align: center;
+}
+
+#documents td.column2, #documents td.column3 {
+	padding-left: 10px;
+}
+
+#documents .column1 {
+	width: 350px;
+}
+
+#documents .column2 {
+	width: 50px;
+}
+
+#documents .column3 {
+	width: 50px;
+}
+
+#documents .link {
+	color: blue;
+	cursor: pointer;
+}
+
+#document {
+	top: 255px;
+	height: 375px;
+}
+
+#document h1 {
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	margin-top: 8px;
+	font-size: 14px;
+}
+
+#document div {
+	padding: 5px
+}
+
+#ranked {
+	top: 95px;
+	height: 540px;
+	overflow-y: auto;
+}
+
+#ranked .column0 {
+    width: 50px;
+    text-align: center;
+    padding-left: 4px;
+}
+
+#ranked .column1 {
+    width: 270px;
+    padding-left: 4px;
+}
+
+#ranked .column2 {
+    width: 50px;
+	text-align: center;
+}
+
+table th span {
+	float: right;
+}
+
+table th {
+	background: lightgrey;
+	font-weight: normal;
+	text-align: left;
+	padding-left: 10px;
+}
+
+.highlight {
+	background: lightgreen;
+}
+
+.negative, .negative input {
+    text-decoration: line-through;
+}

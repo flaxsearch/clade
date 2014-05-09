@@ -1,0 +1,49 @@
+Rabin fairness is a fairness model invented by Matthew Rabin. It goes beyond the standard assumptions in modeling behavior, rationality and self-interest, to incorporate fairness. Rabin's fairness model incorporates findings from the fields of economics and psychology fields to provide an alternative utility model. Fairness is one type of social preference.
+
+==Including fairness in the standard utility model==
+Past utility models incorporated altruism or the fact that people may care not only about their own well-being, but also about the well-being of others. However, evidence indicates that pure altruism does not occur often, contrarily most altruistic behavior demonstrates three facts (as defined by Rabin) and these facts are proven by past events. Due to the existence of these three facts, Rabin created a utility function that incorporates fairness.:
+# People are willing to sacrifice their own material well-being to help those who are being kind.
+## The attempt to provide public goods without coercion departs from pure self-interest.
+## Experiments show that people cooperate to contribute toward a public good to a degree greater than would be implied by pure self-interest. Individually optimal contribution rates, as defined by the standard utility model, are close to 0 percent.
+## During an experiment, the willingness for an individual to contribute to a public good is highly contingent on the behavior of others.
+# People are willing to sacrifice their own material well-being to punish those who are being unkind.
+## Evidence provided by the ultimatum game, consisting of two people, a proposer and decider, splitting a fixed amount of money. The proposer offers a division of the money, then the decider decides if he or she refuses or accepts the proposal. If the decider says yes, they split the money according to the proposer's offer, but if the decider says no, neither person gets any money.
+## Standard utility model would find that any offer proposed to the decider should be expected if it is greater than zero because utility should increase with any increase in income. Along the same lines, the standard utility model would predict that the proposer would offer the smallest amount of money possible to the decider in order to maximize his or her own utility
+## However, data shows that deciders are willing to punish any unfair offer and proposers tend to make fair offers.
+# Both motivations 1 and 2 have a greater effect on behavior as the material cost of sacrificing becomes smaller.
+
+==Rabin's fairness model==
+Rabin formalized fairness using a two person, modified game theory matrix with two decisions (a two by two matrix), where i is the person whose utility is being measured. Furthermore, within the game theory matrix payoffs for each person are allocated. The following formula was created by Rabin to model utility to include fairness: Ui(ai, bj, ci) = πi(ai, bj) + ƒj(bj, ci) * bj). Where:
+# ai represents player i's strategy, bj represents player j's belief about what player i' strategy will be, and ci represents what player i's beliefs about what player j believes player i's strategy is.
+## Although this seems complicated, a is simply player i's strategy, b is player j's strategy given how he/she believes player i will act, and c is player i's decision given what strategy player j is believed to partake in. 
+## In the game below, a, b, and c, will all take the form of either Grab or Share and then the payoffs would be determined and placed into Rabin's Fairness Model.
+# πi(ai, bj) represents the payoffs player i receives
+# Player i's kindness to player j is given by: ƒi(ai, bj) = [πj(bj, ai) - πje(bj)]/[πjh(bj) - πjmin(bj)]
+## πje(bj)= [πjh(bj)+ πl(bj)]/2, where πjh(bj)is player j's highest payoff and πl(bj) is player j's lowest payoff among points that are Pareto efficient
+## πjmin(bj) is the worst possible payoff in the matrix for player j
+# Player i's belief about how kind player j is being to him is given by: ƒj(bj, ci) = [πi(ci, bj) - πie(ci)]/[πjh(ci) - πjmin(ci)]
+## πimin(ci) is player i's worst possible payoff
+## πie(ci)= [πih(ci)+ πl(ci)]/2, where πih(ci)is player j's highest payoff and πl(ci) is player i's lowest payoff among points that are Pareto efficient
+# The two functions above can now specify player's preferences. Player i chooses ai to maximize the expected utility of Ui(ai, bj, ci)
+
+===Fairness model implications===
+The fairness model implies that if player j is treating player i badly, if ƒj(bj, ci) < 0, then player i wishes to treat player j badly as well by choosing an action, ai, that is low or negative. However, if player j is treating player i kindly, ƒj(bj, ci) > 0, then player i will act kindly towards player j, as well (For more in depth examples see Rabin (1993)).
+
+==Welfare and fairness: an application==
+Rabin also used the fairness model as a utility function to determine social welfare. Rabin used a game theory "Grabbing Game" which posited that there are two people shopping, with two cans of soup left. The payoffs for each are given as follows, where player i's payoffs are on the left of each pair and player j's payoffs are on the right of each pair:
+
+
+If both grab or both share, each player i and j get one can of soup. However, one grabs, and the other does not, then the person who grabbed gets both cans of soup. There is a Nash Equilibrium present of (grab, grab). Moreover, applying Rabin's fairness model (grab, grab) will always be a fairness equilibrium but for small values of x the cooperative choice (share, share) will Pareto dominate (grab, grab). The reasoning behind this is that if the two people both grab for and therefore fight over the cans, the angriness and bad tempers that arise are likely to outweigh the importance of receiving the cans. Therefore, while (Grab, Grab) and (Share, Share) are fairness equilibria when material payoffs are small, (Share, Share) will dominate (Grab, Grab) since people are affected by the kindness, which increases utility, or unkindness, which decreases utility, of others. This example could be generalized further to describe the allocation of public goods. 
+
+===Public goods provision and fairness===
+Stouten (2006) further generalized the principle of fairness to be applied to the provision of public goods. He and his colleagues ran three experiments to find how participants reacted when one member of their group violated the equality rule, which states that all group members will coordinate to equally and fairly contribute to the efficient provision of public goods. Their findings demonstrated that the participants believed that the equality rule should be applied to others and therefore when one person violated this rule punishment was used against this person, in terms of negative reactions. Therefore, the equality rule applied in real life situations should lead to the efficient provision of public goods if violations of the important coordination and fairness rules can be detected. However, often these violations cannot be detected which then leads to the free rider problem and an under-provision of public goods.
+
+==See also==
+*Inequity aversion
+*Altruism
+*Social welfare
+*Risk aversion
+*Social preferences
+
+==References==
+

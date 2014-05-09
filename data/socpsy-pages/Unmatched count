@@ -1,0 +1,34 @@
+In psychology and social research, unmatched count, or item count, is a technique to improve through anonymity the number of true answers to possibly embarrassing or self-incriminating questions. It is very simple to use but yields only the "number" of people bearing the property of interest.
+
+== Method ==
+The participants of the survey are divided into two groups at random. One group (the control group) is asked to answer a few harmless questions, while the other group gets one additional question (hence the name "unmatched count"), the one about the property of interest. The respondents are to reveal only the "number" of "yes"-answers they would have given. Since the interviewer does not know how they arrived at that number, it is safe to answer the awkward question truthfully. Due to the unmatched count of items, the number of people who answered "yes" to the awkward question can be mathematically deduced.
+
+=== Example ===
+The control group is asked how many of the following statements apply:
+*I have moved house in the past.
+*I own a pet.
+*I like to go to the theatre.
+*I have never been in a traffic accident.
+Let the number of "yes"-answers from this group be 31.
+
+The second group "additionally" gets a question concerning the point of interest:
+*I have cheated on an examination.
+Let the number of "yes"-answers from this group be 34.
+
+== Evaluation ==
+The number of "yes"-answers in the control group is called the baseline. It is assumed that the second group would have given the same number, were it not for the critical question. Thus, their additional "yes"-answers (3 in the example) are due to the critical question. Their percentage is used to estimate the percentage of cheaters in the population. Let the number of participants in each group be 50. 3 of them answered "yes" to the critical question, meaning that approximately 6% of the population have cheated on examinations.
+
+== See also ==
+*Bogus pipeline
+*Randomized response
+
+== References ==
+*Elisabeth Coutts, Ben Jann (2009). "Sensitive Questions in Online Surveys: Experimental Results for the Randomized Response Technique (RRT) and the Unmatched Count Technique (UCT)", General Online Research Conference in Vienna
+*Dan R. Dalton, James C. Wimbush, Catherine M. Daily (1994). "Using the Unmatched Count Technique (UCT) to estimate base rates for sensitive behavior". Personnel Psychology 47, pp. 817–829
+*Allison M. Ahart, Paul R. Sackett (2004). "A New Method of Examining Relationships between Individual Difference Measures and Sensitive Behavior Criteria: Evaluating the Unmatched Count Technique". Organizational Research Methods, Vol. 7, No. 1, pp. 101–114
+
+== External links ==
+*Joseph LaBrie, Mitchell Earleywine E. (2000). "Sexual risk behavior and alcohol: Higher base rates revealed using the unmatched-count technique". The Journal of Sex Research, 37, 321–326
+*T. Tsuchiya, Y. Hirai, S. Ono (2007). "A study of the properties of the item count technique". Public Opinion Quarterly
+
+

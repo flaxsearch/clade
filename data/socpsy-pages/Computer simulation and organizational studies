@@ -1,0 +1,84 @@
+Computer simulation is a prominent method in organizational studies and strategic management. While there are many uses for computer simulation (including the development of engineering systems inside high-technology firms), most academics in the fields of strategic management and organizational studies have used computer simulation to understand how organizations or firms operate.
+
+While the strategy researchers have tended to focus on testing theories of firm performance, many organizational theorists are focused on more descriptive theories, the one uniting theme has been the use of computational models to either verify or extend theories. It is perhaps no accident that those researchers using computational simulation have been inspired by ideas from biological modeling, ecology, theoretical physics and thermodynamics, chaos theory, complexity theory and organization studies since these methods have also been fruitfully used in those areas.
+
+==Basic distinctions/definitions==
+Researchers studying organizations and firms using computer simulations utilize a variety of basic distinctions and definitions that are common in computational science
+* Agent-based vs Equation-based: agent-based models unfold according to the interactions of relatively simple actions, while equation-based models unfold numerically based on a variety of dynamic or steady-state equations (Note: some argue this is something of a false distinction since some agent based models use equations to direct the behavior of their agents)
+* Model: simplified versions of the real world that contain only essential elements of theoretical interest
+* Complexity of the model: the number of conceptual parts in the model and the connections between those parts
+* Deterministic vs. Stochastic: deterministic models unfold exactly as specified by some pre-specified logic, while stochastic models depend on a variety of draws from probability distributions
+* Optimizing vs. Descriptive: models with actors that either seek optimums (like the peaks in fitness landscapes) or do not
+
+==Methodological approaches==
+
+There are a variety of different methodological approaches in the area of computational simulation. These include but are not limited to the following. (Note: this list is not Mutually Exclusive nor Collectively Exhaustive, but tries to be fair to the dominant trends. For three different taxonomies see Carley 2001; Davis et al. 2007; Dooley 2002)
+
+*Agent-based models: computational models investigating the interaction of multiple agents (many of the following approaches can be 'agent-based' as well)
+*Cellular automata: models exploring multiple actors in physical space whose behavior is based on rules
+*Dynamic network models: any model representing actors and non-actor entities (tasks, resources, locations, beliefs, etc.) as connected through relational links as in dynamic network analysis
+*Genetic Algorithms: models of agents whose genetic information can evolve over time
+*Equation-based (or non-linear modeling): models using (typically non-linear) equations that determine the future state of its systems
+*Social Network models: any model representing actors as connected through stereotypical 'ties' as in social network analysis
+*Stochastic Simulation: models that involve random variables or source of stochasticity
+*System dynamics: equation-based approach using casual-loops and stocks & flows of resources
+*NK modeling: actors modeled as N nodes linked through K connections that are (typically) trying to reach the peak of a fitness landscape
+
+==Early research==
+
+Early research in strategy and organizations using computational simulation concerned itself with either the macro-behavior of systems or specific organziational mechanisms. Highlights of early research included:
+
+*Cohen, March, & Olsen's (1972) "Garbage Can Model of Organizational Choice" modeled organizations as a set of solutions seeking problems in a rather anarchic 'garbage can'-esque organization.
+*March's (1991) study of "Exploration and Exploitation in Organizational Learning" utilized John Holland's (1975) basic explore/exploit distinction to show the value of slow learners in organizations.
+*Nelson & Winter's (1982) "Evolutionary theory of economic change" used a simulation to show that an evolutionary model could produce the same sort of GDP / productivity numbers as neo-classical rational choice theorizing.
+
+==Later research==
+
+Later research using computational simulation flowered in the 1990s and beyond. Highlights include:
+
+*Carroll & Harrison's (1998) model of organizational demography and culture
+*Davis, Eisenhardt & Bingham's (2009) model of organization structure in unpredictable environments
+*Gavetti, & Levinthal's (2000) model of cognitive and experiential search
+*Levinthal's (1997) NK model of adaptation on rugged fitness landscapes
+*Rivkin's (2000) study of strategic imitation
+*Rudolph & Repenning's (2002) model of disastrous tipping points
+*Sastry's (1997) model of punctuated organizational change
+*Zott's (2003) model of strategic evolution and dynamic capabilities
+
+==References==
+
+== Further reading ==
+*Adner, R., & Levinthal, D. 2001. Demand Heterogeneity and Technology Evolution: Implications for Product and Process Innovation. Management Science, 47(5): 611–628 [http://www.wharton.upenn.edu/faculty/levinthd.html].
+*Bruderer, E., & Singh, J. S. 1996. Organizational Evolution, Learning, and Selection: A Genetic-Algorithm-Based Model. Academy of Management Journal, 19(5): 1322–1349.
+*Carley, K. M. 2001. Computational Approaches to Sociological Theorizing. In J. Turner (Ed.), Handbook of Sociological Theory: 69–84. New York, NY: Kluwer Academic/Plenum Publishers [http://www.casos.cs.cmu.edu/bios/carley/carley.html].
+*Carroll, G., & Harrison, J. R. 1998. Organizational Demography and Culture: Insights from a Formal Model and Simulation. Administrative Science Quarterly, 43: 637–667 [http://www.utdallas.edu/~harrison/Richard%20Harrison's%20homepage_files/Richard_harrison.htm.
+*Cohen, M. D., March, J., & Olsen, J. P. 1972. A Garbage Can Model of Organizational Choice. Administrative Science Quarterly, 17(1): 1–25.
+*Davis, J.P., Eisenhardt, K.M. & Bingham, C.B. 2007. Developing Theory with Simulation Methods. Academy of Management Review, 32(2), 580–599 [http://web.mit.edu/~jasond/www/simulation.htm].
+*Davis, J.P., Eisenhardt, K.M. & Bingham, C.B. 2009. Optimal Structure, Market Dynamism, and the Strategy of Simple Rules. Administrative Science Quarterly, 54: 413-452. [http://web.mit.edu/~jasond/www/optimalstructure.htm].
+*Forrester, J. 1961. Industrial Dynamics. Cambridge, MA: MIT Press.
+*Gavetti, G., & Levinthal, D. 2000. Looking Forward and Looking Backward: Cognitive and Experiential Search. Administrative Science Quarterly, 45: 113–137 [http://www.wharton.upenn.edu/faculty/levinthd.html].
+*Harrison, J. R., Lin, Z., Carroll, G. R., & Carley, K. M. (2007). Simulation Modeling in Organizational and Management Research. Academy of Management Review, 32, 1229–1245.
+*Holland, J. H. 1975. Adaptation in natural and artificial systems. Ann Arbor, MI: The University of Michigan Press.
+*Kauffman, S. 1989. Adaptation on rugged fitness landscapes. In E. Stein (Ed.), Lectures in the Science of Complexity. Reading, Mass.: Addison–Wesley.
+*Kauffman, S. 1993. The Origins of Order. New York, NY: Oxford University Press.
+*Langton, C. G. 1984. Self-Reproduction in Cellular Automata. Physica, 10D: 134–144.
+*Lant, T., & Mezias, S. 1990. Managing Discontinuous Change: A Simulation Study of Organizational Learning and Entrepreneurship. Strategic Management Journal, 11: 147–179.
+*Lave, C., & March, J. G. 1975. An Introduction to Models in the Social Sciences. New York, NY: Harper and Row.
+*Law, A. M., & Kelton, D. W. 1991. Simulation Modeling and Analysis (2nd ed.). New York, NY: McGraw–Hill.
+*Levinthal, D. 1997. Adaptation on Rugged Landscapes. Management Science, 43: 934–950.
+*Lomi, A., & Larsen, E. 1996. Interacting Locally and Evolving Globally: A Computational Approach to the Dynamics of Organizational Populations. Academy of Management Journal, 39(4): 1287–1321.
+*March, J. G. 1991. Exploration and Exploitation in Organizational Learning. Organization Science, 2(1): 71–87.
+*Nelson, R. R., & Winter, S. G. 1982. An Evolutionary Theory of Economic Change. Cambridge, Massachusetts: Belknap – Harvard University Press.
+*Repenning, N. 2002. A Simulation-Based Approach to Understanding the Dynamics of Innovation Implementation. Organization Science, 13(2): 109–127 [http://web.mit.edu/nelsonr/www/].
+*Rivkin, J., W. 2000. Imitation of Complex Strategies. Management Science, 46(6): 824–844.
+*Rivkin, J., W. 2001. Reproducing Knowledge: Replication Without Imitation at Moderate Complexity. Organization Science, 12(3): 274–293.
+*Rudolph, J., & Repenning, N. 2002. Disaster Dynamics: Understanding the Role of Quantity in Organizational Collapse. Administrative Science Quarterly, 47: 1–30 [http://web.mit.edu/nelsonr/www/.
+*Sastry, M. A. 1997. Problems and paradoxes in a model of punctuated organizational change. Administrative Science Quarterly, 42(2): 237–275.
+*Schelling, T. 1971. Dynamic models of segregation. Journal of Mathematical Sociology, 1: 143–186.
+* Simon, H. 1996 (1969; 1981) The Sciences of the Artificial (3rd Edition) MIT Press [http://www.amazon.com/dp/0262691914].
+*Sterman, J. 2000. Business Dynamics: Systems Thinking and Modeling for a Complex World. New York, NY: Irwin McGraw–Hill.
+*Sterman, J., Repenning, N., & Kofman, F. 1997. Unanticipated Side Effects of Successful Quality Programs: Exploring a Paradox of Organizational Improvement. Management Science, 43(4): 503–521 [http://web.mit.edu/nelsonr/www/].
+*Wolfram, S. 2002. A New Kind of Science. Champaign, IL: Wolfram Media.
+*Zott, C. 2003. Dynamic Capabilities and the Emergence of Intra-industry Differential Firm Performance: Insights from a Simulation Study. Strategic Management Journal, 24: 97–125 [http://www.insead.edu/facultyresearch/faculty/profiles/czott].
+
+

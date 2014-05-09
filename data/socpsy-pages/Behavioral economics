@@ -1,0 +1,270 @@
+Behavioral economics and the related field, behavioral finance, study the effects of social, cognitive and emotional factors on the economic decisions of individuals and institutions and the consequences for market prices, returns and the resource allocation. The fields are primarily concerned with the bounds of rationality of economic agents. Behavioral models typically integrate insights from psychology with neo-classical economic theory. In so doing they cover a range of concepts, methods, and fields.
+
+Behavioral analysts are not only concerned with the effects of market decisions but also with public choice, which describes another source of economic decisions with related biases towards promoting self-interest.
+==History==
+During the classical period, microeconomics was closely linked to psychology. For example, Adam Smith wrote "The Theory of Moral Sentiments", which proposed psychological explanations of individual behavior, including concerns about fairness and justice, and Jeremy Bentham wrote extensively on the psychological underpinnings of utility. However, during the development of neo-classical economics economists sought to reshape the discipline as a natural science, deducing economic behavior from assumptions about the nature of economic agents. They developed the concept of homo economicus, whose psychology was fundamentally rational. This led to unintended and unforeseen errors.
+
+However, many important neo-classical economists employed more sophisticated psychological explanations, including Francis Edgeworth, Vilfredo Pareto and Irving Fisher. Economic psychology emerged in the 20th century in the works of Gabriel Tarde, George Katona and Laszlo Garai. Expected utility and discounted utility models began to gain acceptance, generating testable hypotheses about decision making given uncertainty and intertemporal consumption respectively. Observed and repeatable anomalies eventually challenged those hypotheses, and further steps were taken by the Nobel prizewinner Maurice Allais, for example in setting out the Allais paradox, a decision problem he first presented in 1953 which contradicts the expected utility hypothesis.
+In the 1960s cognitive psychology began to shed more light on the brain as an information processing device (in contrast to behaviorist models). Psychologists in this field, such as Ward Edwards, Amos Tversky and Daniel Kahneman began to compare their cognitive models of decision-making under risk and uncertainty to economic models of rational behavior. In mathematical psychology, there is a longstanding interest in the transitivity of preference and what kind of measurement scale utility constitutes (Luce, 2000).
+
+===Prospect theory===
+In 1979, Kahneman and Tversky wrote "Prospect theory: An Analysis of Decision Under Risk", an important paper that used cognitive psychology to explain various divergences of economic decision making from neo-classical theory. Prospect theory is an example of generalized expected utility theory. Although not a conventional part of behavioral economics, generalized expected utility theory is similarly motivated by concerns about the descriptive inaccuracy of expected utility theory.
+
+In 1968 Nobel Laureate Gary Becker published "Crime and Punishment: An Economic Approach", a seminal work that factored psychological elements into economic decision making. Becker, however, maintained strict consistency of preferences. Nobelist Herbert Simon developed the theory of Bounded Rationality to explain how people "irrationally" seek "satisfaction", instead of maximizing utility, as conventional economics presumed. Maurice Allais produced "Allais Paradox", a crucial challenge to expected utility.
+
+Psychological traits such as overconfidence, projection bias, and the effects of limited attention are now part of the theory. Other developments include a conference at the University of Chicago, a special behavioral economics edition of the "Quarterly Journal of Economics" ('In Memory of Amos Tversky') and Kahneman's 2002 Nobel for having "integrated insights from psychological research into economic science, especially concerning human judgment and decision-making under uncertainty".
+
+===Intertemporal choice===
+Behavioral economics has also been applied to intertemporal choice. Intertemporal choice behavior is largely inconsistent, as exemplified by George Ainslie's hyperbolic discounting (1975) which is one of the prominently studied observations, further developed by David Laibson, Ted O'Donoghue, and Matthew Rabin. Hyperbolic discounting describes the tendency to discount outcomes in near future more than for outcomes in the far future. This pattern of discounting is dynamically inconsistent (or time-inconsistent), and therefore inconsistent with basic models of rational choice, since the rate of discount between time "t" and "t+1" will be low at time "t-1", when "t" is the near future, but high at time "t" when "t" is the present and time "t+1" the near future.
+
+The pattern can actually be explained through models of subadditive discounting which distinguishes the delay and interval of discounting: people are less patient (per-time-unit) over shorter intervals regardless of when they occur. Much of the recent work on intertemporal choice indicates that discounting is a constructed preference. Discounting is influenced greatly by expectations, framing, focus, thought listings, mood, sign, glucose levels, and the scales used to describe what is discounted. Some prominent researchers question whether discounting, the major parameter of intertemporal choice, actually describes what people do when they make choices with future consequences. Considering the variability of discount rates, this may be the case.
+
+===Other areas of research===
+
+Other branches of behavioral economics enrich the model of the utility function without implying inconsistency in preferences. Ernst Fehr, Armin Falk, and Matthew Rabin studied "fairness", "inequity aversion", and "reciprocal altruism", weakening the neoclassical assumption of "perfect selfishness." This work is particularly applicable to wage setting. Work on "intrinsic motivation" by Gneezy and Rustichini and on "identity" by Akerlof and Kranton assumes agents derive utility from adopting personal and social norms in addition to conditional expected utility.
+
+"Conditional expected utility" is a form of reasoning where the individual has an illusion of control, and calculates the probabilities of external events and hence utility as a function of their own action, even when they have no causal ability to affect those external events.
+
+Behavioral economics caught on among the general public, with the success of books like Dan Ariely's "Predictably Irrational." Practitioners of the discipline have studied quasi-public policy topics such as broadband mapping.
+
+==Methodology==
+Behavioral economics and finance theories developed almost exclusively from experimental observations and survey responses, although in more recent times real world data have taken a more prominent position. Functional magnetic resonance imaging (fMRI) allows determination of which brain areas are active during economic decision making. Experiments simulating markets such as stock trading and auctions can isolate the effect of a particular bias upon behavior. Such experiments can help narrow the range of plausible explanations. Good experiments are incentive-compatible, normally involving binding transactions and real money.
+
+===Behavioral economics vs experimental economics===
+Note that behavioral economics is distinct from experimental economics, which uses experimental methods to study economic questions. Not all economics experiments are psychological. While many experimental economics studies probe psychological aspects of decision making, other experiments explore institutional features or serve as "beta testing" for new market mechanisms. Not all behavioral economics uses experiments, either; behavioral economists rely heavily on theory and on observational studies "in the field."
+
+==Key observations==
+Three themes predominate in behavioral finance and economics:
+
+*Heuristics: People often make decisions based on approximate rules of thumb, not strict logic. See also cognitive biases and bounded rationality.
+*Framing: The collection of anecdotes and stereotypes that make up the mental emotional filters individuals rely on to understand and respond to events.
+*Market inefficiencies: These include mis-pricings, non-rational decision making, and return anomalies. Richard Thaler, in particular, has described specific market anomalies from a behavioral perspective.
+
+Barberis, Shleifer, and Vishny and Daniel, Hirshleifer, and Subrahmanyam (1998) built models based on extrapolation (seeing patterns in random sequences) and overconfidence to explain security market under- and overreactions, though their source continues to be debated. These models assume that errors or biases are positively correlated across agents so that they do not cancel out in aggregate. This would be the case if a large fraction of agents look at the same signal (such as the advice of an analyst) or have a common bias.
+
+More generally, cognitive biases may also have strong anomalous effects in the aggregate if there is social contagion of ideas and emotions (causing collective euphoria or fear) leading to phenomena such as herding and groupthink. Behavioral finance and economics rests as much on social psychology within large groups as on individual psychology. In some behavioral models, a small deviant group can have substantial market-wide effects (e.g. Fehr and Schmidt, 1999).
+
+==Topics==
+Models in behavioral economics typically address a particular market anomaly and modify standard neo-classical models by describing decision makers as using heuristics and subject to framing effects. In general, economics continues to sit within the neoclassical framework, though the standard assumption of rational behavior is often challenged.
+
+===Heuristics===
+
+* Prospect theory
+* Loss aversion
+* Disappointment
+* Status quo bias
+* Gambler's fallacy
+* Self-serving bias
+* Money illusion
+
+===Framing===
+
+* Cognitive framing
+* Mental accounting
+* Anchoring
+
+===Anomalies (economic behavior)===
+
+* Disposition effect
+* Endowment effect
+* Inequity aversion
+* Reciprocity
+* Intertemporal consumption
+* Present-biased preferences
+* Momentum investing
+* Greed and fear
+* Herd behavior
+* Sunk-cost fallacy
+
+===Anomalies (market prices and returns)===
+
+* Equity premium puzzle
+* Efficiency wage hypothesis
+* Price stickiness
+* Limits to arbitrage
+* Dividend puzzle
+* Fat tails
+* Calendar effect
+
+==Criticisms==
+Critics of behavioral economics typically stress the rationality of economic agents. They contend that experimentally observed behavior has limited application to market situations, as learning opportunities and competition ensure at least a close approximation of rational behavior.
+
+Others note that cognitive theories, such as prospect theory, are models of decision making, not generalized economic behavior, and are only applicable to the sort of once-off decision problems presented to experiment participants or survey respondents.
+
+Traditional economists are also skeptical of the experimental and survey-based techniques which behavioral economics uses extensively. Economists typically stress revealed preferences over stated preferences (from surveys) in the determination of economic value. Experiments and surveys are at risk of systemic biases, strategic behavior and lack of incentive compatibility.
+
+Rabin (1998) dismisses these criticisms, claiming that consistent results are typically obtained in multiple situations and geographies and can produce good theoretical insight. Behavioral economists have also responded to these criticisms by focusing on field studies rather than lab experiments. Some economists see a fundamental schism between experimental economics and behavioral economics, but prominent behavioral and experimental economists tend to share techniques and approaches in answering common questions. For example, behavioral economists are actively investigating neuroeconomics, which is entirely experimental and cannot be verified in the field.
+
+Other proponents of behavioral economics note that neoclassical models often fail to predict outcomes in real world contexts. Behavioral insights can influence neoclassical models. Behavioral economists note that these revised models not only reach the same correct predictions as the traditional models, but also correctly predict some outcomes where the traditional models failed.
+
+==Behavioral finance==
+===Topics===
+The central issue in behavioral finance is explaining why market participants make systematic errors. Such errors affect prices and returns, creating market inefficiencies. It also investigates how other participants arbitrage such market inefficiencies.
+
+Behavioral finance highlights inefficiencies such as under- or over-reactions to information as causes of market trends (and in extreme cases of bubbles and crashes). Such reactions have been attributed to limited investor attention, overconfidence, overoptimism, mimicry (herding instinct) and noise trading. Technical analysts consider behavioral economics' academic cousin, behavioral finance, to be the theoretical basis for technical analysis.
+
+Other key observations include the asymmetry between decisions to acquire or keep resources, known as the "bird in the bush" paradox, and loss aversion, the unwillingness to let go of a valued possession. Loss aversion appears to manifest itself in investor behavior as a reluctance to sell shares or other equity, if doing so would result in a nominal loss. It may also help explain why housing prices rarely/slowly decline to market clearing levels during periods of low demand.
+
+Benartzi and Thaler (1995), applying a version of prospect theory, claim to have solved the equity premium puzzle, something conventional finance models have been unable to do so far.
+Experimental finance applies the experimental method, e.g. creating an artificial market by some kind of simulation software to study people's decision-making process and behavior in financial markets.
+
+===Models===
+Some financial models used in money management and asset valuation incorporate behavioral finance parameters, for example:
+
+* Thaler's model of price reactions to information, with two phases, underreaction-adjustment-overreaction, creating a price trend
+:One characteristic of overreaction is that average returns following announcements of good news is lower than following bad news. In other words, overreaction occurs if the market reacts too strongly or for too long to news, thus requiring adjustment in the opposite direction. As a result, outperforming assets in one period are likely to underperform in the following period.
+* The stock image coefficient
+
+===Criticisms===
+Critics such as Eugene Fama typically support the efficient-market hypothesis. They contend that behavioral finance is more a collection of anomalies than a true branch of finance and that these anomalies are either quickly priced out of the market or explained by appealing to market microstructure arguments. However, individual cognitive biases are distinct from social biases; the former can be averaged out by the market, while the other can create positive feedback loops that drive the market further and further from a "fair price" equilibrium. Similarly, for an anomaly to violate market efficiency, an investor must be able to trade against it and earn abnormal profits; this is not the case for many anomalies.
+
+A specific example of this criticism appears in some explanations of the equity premium puzzle. It is argued that the cause is entry barriers (both practical and psychological) and that returns between stocks and bonds should equalize as electronic resources open up the stock market to more traders. In reply, others contend that most personal investment funds are managed through superannuation funds, minimizing the effect of these putative entry barriers. In addition, professional investors and fund managers seem to hold more bonds than one would expect given return differentials.
+
+===Quantitative===
+Quantitative behavioral finance uses mathematical and statistical methodology to understand behavioral biases. In marketing research, a study shows little evidence that escalating biases impact marketing decisions. Leading contributors include Gunduz Caginalp (Editor of the Journal of Behavioral Finance from 2001–2004) and collaborators including 2002 Nobelist Vernon Smith, David Porter, Don Balenovich, Vladimira Ilieva and Ahmet Duran and Ray Sturm.
+
+The research can be grouped into the following areas:
+# Empirical studies that demonstrate significant deviations from classical theories
+# Modeling using the concepts of behavioral effects together with the non-classical assumption of the finiteness of assets
+# Forecasting based on these methods
+# Testing models against experimental asset markets
+
+==Behavioral game theory==
+Behavioral game theory is a subject that analyzes interactive strategic decisions and behavior using the methods of game theory, experimental economics, and experimental psychology. Experiments include testing deviations from typical simplifications of economic theory such as the independence axiom and neglect of altruism, fairness, and framing effects. On the positive side, the method has been applied to interactive learning   • Teck H. Ho (2008). "Individual learning in games," "The New Palgrave Dictionary of Economics", 2nd Edition. Abstract. </ref> and social preferences.   • Colin F. Camerer (2008). "behavioral game theory," "The New Palgrave Dictionary of Economics", 2nd Edition. Abstract.</ref> As a research program, the subject is a development of the last three decades.
+
+== Economic reasoning in non-human animals ==
+
+A handful of comparative psychologists at American universities have attempted to demonstrate economic reasoning in non-human animals. Early attempts along these lines focus on the behavior of rats and pigeons. These studies draw on the tenets of behavioral psychology, where the main goal is to discover analogs to human behavior in experimentally-tractable non-human animals. They are also methodologically similar to the work of Ferster and Skinner . Methodological similarities aside, early researchers in non-human economics deviate from behaviorism in their terminology. Although such studies are set up primarily in an operant conditioning chamber, using food rewards for pecking/bar-pressing behavior, the researchers describe pecking and bar pressing not in terms of reinforcement and stimulus-response relationships, but instead in terms of work, demand, budget, and labor. Recent studies have adopted a slightly different approach, taking a more evolutionary perspective, comparing economic behavior of humans to a species of non-human primate, the capuchin monkey.
+
+=== The animal as a human analog ===
+
+Many early studies of non-human economic reasoning were performed on rats and pigeons in a operant conditioning chamber. These studies looked at things like peck rate (in the case of the pigeon) and bar pressing rate (in the case of the rat) given certain conditions of reward. Early researchers claim, for example, that response pattern (pecking/bar pressing rate) is an appropriate analog to human labor supply . Researchers in this field advocate for the appropriateness of using animal economic behavior to understand the elementary components of human economic behavior . In a paper by Battalio, Green, and Kagel (1981, p 621), they write
+=== Labor supply ===
+
+The typical laboratory environment to study labor supply in pigeons is set up as follows. Pigeons are first deprived of food. Since the animals are hungry, food becomes highly desired. The pigeons are placed in an operant conditioning chamber and through orienting and exploring the environment of the chamber they discover that by pecking a small disk located on one side of the chamber, food is delivered to them. In effect, pecking behavior becomes reinforced, as it is associated with food. Before long, the pigeon pecks at the disk (or stimulus) regularly.
+
+In this circumstance, The pigeon is said to "work" for the food by pecking. The food, then, is thought of as the currency. The value of the currency can be adjusted in a couple of different ways, including the amount of food delivered, the rate of food delivery and the type of food delivered (Some foods are more desirable than others).
+
+Economic behavior similar to that observed in humans is discovered when the hungry pigeons stop working/work less when the reward is reduced. Researchers argue that this is similar to labor supply behavior in humans. That is like humans (who, even in need, will only work so much for a given wage) the pigeons demonstrate decreases in pecking (work) when the reward (value) is reduced .
+
+===Demand===
+
+In human economics, a typical demand curve is negative. This means that as the price of a certain good increases, the amount that consumers are able to purchase decreases. Researchers studying demand curves in non-human animals such as rats observe that demand curves have negative slopes, consistent with the slope of human demand curves.
+
+Researchers have studied demand in rats in a manner distinct from studying labor supply in pigeons. Specifically, say we have experimental subjects, rats, in an operant chamber and we require them to press a lever to receive a reward. The reward can be either food (reward pellets), water, or a commodity drink such as cherry cola. Unlike previous pigeon studies, where the work analog was pecking and the monetary analog was reward, in the studies on demand in rats, the monetary analog is bar pressing. Under these circumstances, the researchers claim that changing the number of bar presses required to obtain a commodity item is analogous to changing the price of a commodity item in human economics .
+
+In effect, results of demand studies in non-human animals are that, as the bar-pressing requirement (cost) increases, the animal presses the bar the required number of times less often (payment).
+
+===Monkey trading behavior===
+Recent work on economic behavior in non-human animals has focused on capuchin monkeys. Here the researchers seem less inclined toward the behaviorist tradition of the laboratory animal-human behavior analog. Instead, they attempt to adopt a more evolutionary perspective, positing that economic reasoning might be basic, unlearned, and serve some adaptive function.
+
+One recent study involves the introduction of a currency system into a colony of captive capuchin monkeys. The currency is in the form of coins and is redeemable for food and other purchasable items when exchanged with a researcher. Under these conditions, the researchers studied three features of monkey trading: demand, loss aversion, and risk aversion.
+
+In this study, monkeys are presented with an amount of money and are shown a certain amount of food or other goods. The monkeys must take the money and hand it to the experimenter in exchange for goods. In one condition of the experiment, after the monkey has paid for the goods, it has the option to take a sure amount of food now, or wait until the experimenter alters the amount of food presented. In this circumstance, the experimenter can either increase or decrease the amount of food given. Thus, this experimental setup allows the researchers to look at the gambling behavior of the animals. The experimenters can therefore ask the following questions: Will the monkey take the sure amount of food? Will the monkey “gamble” by waiting until the experimenter changes the amount of food present? Does the decision of the animal depend on the circumstances? Results indicate that the monkeys are risk-averse: They prefer to take the initial amount of food than wait for the experimenter to change the amount presented.
+
+The experimenters introduce several other manipulations, including changing the allocated budget, changing the cost of certain items, changing the items themselves. Specifically, the researchers found an increase in item purchase and consumption when that item decreases in value, a result consistent with those found in human economics.
+
+Taken together, the results of this study indicate that capuchin monkeys are not only risk-averse, but are also sensitive to constructs such as price, budget, and payoff expectation. According to the researchers, the animals are not trained to behave in this way; these behaviors arise naturally in the trading environment. As a result, these researchers argue that basic economic behavior and reasoning might be unlearned, innate, and subject to natural selection.
+
+==Key figures==
+===Economics===
+
+*Dan Ariely
+*Colin Camerer
+*Ernst Fehr
+*Daniel Kahneman
+*David Laibson
+*George Loewenstein
+*Sendhil Mullainathan
+*Drazen Prelec
+*Matthew Rabin
+*Herbert Simon
+*Paul Slovic
+*Vernon L. Smith
+*Larry Summers
+*Richard Thaler
+*Amos Tversky
+===Finance===
+
+*Malcolm Baker
+*Nicholas Barberis
+*Gunduz Caginalp
+*David Hirshleifer
+*Andrew Lo
+*Michael Mauboussin
+*Terrance Odean
+*Charles Plott
+*Hersh Shefrin
+*Robert Shiller
+*Andrei Shleifer
+*Richard Thaler
+==See also==
+
+* Adaptive market hypothesis
+* Behavioralism
+* Behavioral finance
+* Behavioral Operations Research
+* Cognitive bias
+* Cognitive psychology
+* Confirmation bias
+* Cultural economics
+* Culture change
+* Economic sociology
+* Emotional bias
+* Experimental economics
+* Experimental finance
+* Fuzzy-trace theory
+* Habit (psychology)
+* Hindsight bias
+* Important publications in behavioral finance(economics)
+* Journal of Behavioral Finance
+* List of cognitive biases
+* Methodological individualism
+* Neuroeconomics
+* Observational techniques
+* Praxeology
+* Rationality
+* Repugnancy costs
+* Socioeconomics
+* Socionomics
+
+==Notes==
+==References==
+*
+*
+* Diamond, Peter A., and Hannu Vartiainen, ed. (2007). "Behavioral Economics and its Applications". Description and preview.
+*Garai Laszlo. Identity Economics – An Alternative Economic Psychology. 1990–2006.
+*
+* 
+*Kuran, Timur (1995). "Private Truths, Public Lies: The Social Consequences of Preference Falsification", Harvard University Press. Description and chapter-preview links.
+* "The New Palgrave Dictionary of Economics" (2008), 2nd Edition. Abstract links:
+: "Simon, Herbert A. (1916–2001)."
+: "Behavioral public economics."
+: "Behavioral finance."
+: "Rationality, bounded."
+* Abstract.
+* Plott, Charles R., and Vernon L. Smith, ed. (2008). "Handbook of Experimental Economics Results", v. 1, Elsevier. Chapter-preview links.
+* Press +.
+* Schelling, Thomas C. (2006 "Micromotives and Macrobehavior", Norton. [http://books.wwnorton.com/books/978-0-393-32946-9/ Description, preview.
+* 
+* Thaler, Richard H., and Sendhil Mullainathan (2008). "Behavioral Economics," "The Concise Encyclopedia of Economics", 2nd Edition. Liberty Fund.
+
+==External links==
+* Behavioral Finance Initiative of the International Center for Finance at the Yale School of Management
+* Overview of Behavioral Finance
+* Geary Behavioural Economics Blog, of the Geary Institute at University College Dublin
+* Society for the Advancement of Behavioural Economics
+* Behavioral Economics: Past, Present, Future - Colin F. Camerer and George Loewenstein
+* A History of Behavioural Finance / Economics in Published Research: 1944 - 1988
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Flax Clade PoC</title>
+        <link rel="stylesheet" type="text/css" href="jquery-ui-1.8.16.custom.css" />    
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="shortcut icon" href="favicon.ico" />
+        <script type="text/javascript" src="jquery-1.6.4.min.js"></script>
+        <script type="text/javascript" src="jquery-ui-1.8.16.custom.min.js"></script>
+        <script type="text/javascript" src="jquery.jstree.js"></script>
+        <script type="text/javascript" src="misc.js"></script>
+        <script type="text/javascript" src="editable.js"></script>
+        <script type="text/javascript" src="combobox.js"></script>
+        <script type="text/javascript" src="direction.js"></script>
+        <script type="text/javascript" src="table.js"></script>
+        <script type="text/javascript" src="busy.js"></script>
+        <script type="text/javascript" src="highlight.js"></script>
+        <script type="text/javascript" src="clade.js"></script>
+    </head>
+    <body style="display: none">
+        <div id="header">
+            <a href="http://www.flax.co.uk" target="flax"><img src="/static/images/flax.png"/></a>
+            <h1>Flax Clade PoC</h1>
+            <a href="http://www.flax.co.uk/" class="flaxlink" target="flax">flax.co.uk</a>
+            <button id="back" class="menu">Back</button>
+            <a href="/static/help.html" class="menu" target="help">Help</a>
+        </div>
+        <div id="taxonomies" class="left">
+            <select></select>
+            <button id="create">Create</button>
+            <button id="rename">Rename</button>
+            <button id="delete">Delete</button>
+        </div>
+        <div id="taxonomy" class="left">
+            <div id="tree"></div>
+        </div>
+        <div id="category" class="right">
+            <span>Category</span>
+            <span class="name"></span>
+            <span class="count"></span>
+        </div>
+        <div id="title" class="right">
+            <span>Document</span>
+            <span class="id"></span>
+        </div>
+        <div id="keywords" class="right"></div>
+        <div id="suggestions" class="right"></div>
+        <div id="documents" class="right"></div>
+        <div id="ranked" class="left"></div>
+        <div id="dockeywords" class="right"></div>
+        <div id="document" class="right"></div>
+        <div id="dialog"><p></p><label>Taxonomy name: </label><input></input></div>
+    </body>
+</html>

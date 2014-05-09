@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Flax Clade poC - Help</title>
+		<link rel="stylesheet" type="text/css" href="jquery-ui-1.8.16.custom.css" />	
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="shortcut icon" href="favicon.ico" />
+	</head>
+	<body>
+		<div id="header">
+			<a href="http://www.flax.co.uk"><img src="/static/images/flax.png" /></a>
+			<h1>Flax Clade PoC</h1>
+		</div>
+		<div id="help" class="ui-widget">
+			<h1>Help</h1>
+		
+			<h2>Taxonomies</h2>
+			<p>To select a taxonomy, use the drop-down menu at top left. The taxonomy will appear, unexpanded, in the left-hand part of the screen. You can click on the triangular icon at the left of a taxonomy element to expand or contract a node. Clicking on the document icon next to the node name will bring up a context menu (none of the options are currently functional in the prototype).</p>
+			<p>Click on a taxonomy node to show documents classified under the Node represented by a node. Documents are classified using the list of Keywords contained in a Node.</p>
+			<h2>Keywords & Suggested Keywords</h2>
+			<p>Keywords for a selected Node are shown in the area titled 'Keywords'. These keywords are used by the categorisation system to file a document under a particular taxonomy node (or nodes). Extra keywords, automatically suggested by the system based on document content, are shown to the right of the Keywords area in the area titled 'Suggestions' - these are <strong>not</strong> used by the categorisation system.</p>
+			<p>Keywords have weights - in the prototype these default to 100%.</p>
+			<h3>Adding a new keyword</h3>
+			<p>To add a new keyword click the + icon. An editable field will appear highlighted in yellow. Enter the new keyword data and click outside the editable field to finish. </p>
+			<h3>Editing a keyword</h3>
+			<p>Click the keyword to edit its text.</p>
+			<h3>Removing a keyword</h3>
+			<p>Keywords may be removed by clicking the small 'x' icon next to the keyword text.</p>
+			<h3>Adding a suggested keyword</h3>
+			<p>To add a suggested keyword for use by the categorisation system, click on it in the Suggestions area and drag it across to the Keywords area. Document categorisation will repeat based on the new list of keywords. </p>
+
+			<h2>Documents</h2>
+			<p>The 'Documents' area shows which documents are categorised under the currently selected Node or taxonomy node. This list will change when the Keywords for a particular Node are modified. When Keywords change, the order of documents also changes: the New and Old order is shown numerically.</p>
+			<h3>Displaying a document</h3>
+			<p>To show the detail of document click its title or ID number. You will see the Keywords this document contains; the Metadata (author, title etc.) for this document and the document text, with relevant keywords highlighted (note that full formatting is not preserved). You will also see at the left the Nodes which the document has been classified against. Click the node name highlighted in blue at top right to return to the taxonomy.<p>
+		</div>
+	</body>
+</html>

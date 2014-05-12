@@ -169,7 +169,12 @@ if __name__ == '__main__':
 
         if sys.argv[1] == 'export':
             with open(sys.argv[2], 'w') as f:
-                taxonomy.write_xml_file(f, taxes)
+                if sys.argv[2].endswith('.xml'):
+                    taxonomy.write_xml_file(f, taxes)
+                elif sys.argv[2].endswith('.csv'):
+                    taxonomy.write_csv_file(f, taxes)
+                else:
+                    print 'unrecognized output file extension (use .xml or .csv)'
 
         elif sys.argv[1] == 'lscat':
             tax = taxonomy.term_for_path(taxes, sys.argv[2])

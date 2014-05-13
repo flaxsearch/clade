@@ -35,21 +35,25 @@ class Term(object):
     """
 
     _uid = 0
-    def __init__(self, name=None, level=0, clues=None):
+    def __init__(self, name=None, level=0, clues=None, uid=None):
         self.parent = None
         self.name = name
         self.level = level
-        if clues is None or len(clues) == 0:
+        if clues is None or len(clues) == 0 and name is not None:
             self._clues = dict((word, True) for word in WORD_RE.findall(name.lower()))
         else:
             self._clues = clues
         self.children = []
-        self.uid = Term._uid = Term._uid + 1
+        if uid is not None:
+            Term._uid = max(uid, Term._uid)
+            self.uid = uid
+        else:
+            self.uid = Term._uid = Term._uid + 1
 
     def add_child(self, child):
         self.children.append(child)
         child.parent = self
-        
+    
     def create_child(self, name):
         child = Term(name, self.level + 1, None)
         self.add_child(child)
@@ -158,6 +162,29 @@ def parse_csv_file(path):
 
     return stack[0]
 
+def parse_xml_file(path):
+    context = etree.iterparse(path, events=("start", "end"))
+    term = None
+    level = 0
+    for event, elem in context:
+        print event, elem.tag, elem.text, elem.attrib
+        if event == 'start' and elem.tag == 'category':
+            t = Term(uid=elem.attrib.get('id'), clues={}, level=level)
+            if term is not None:
+                term.add_child(t)
+            term = t
+            level += 1
+        elif event == 'end' and elem.tag == 'name':
+            term.name = elem.text
+        elif event == 'end' and elem.tag == 'clue':
+            term._clues[elem.text] = elem.attrib.get('negative') != 'true'
+        elif event == 'end' and elem.tag == 'category':
+            if term.parent is None:
+                return term
+            term = term.parent
+            level -= 1
+    assert False
+
 def write_csv_file(f, taxes):
     """ Export a CSV file for the given taxonomies to the (open) file handle
         specified.
@@ -199,7 +226,7 @@ def write_xml_file(f, taxes):
         for clue, positive in term.iter_clues():
             attrs = {}
             if not positive:
-                attrs["negative"] = True
+                attrs["negative"] = 'true'
             x.start("clue", attrs)
             x.data(clue)
             x.end("clue")
@@ -388,9 +415,6 @@ def suggest_keywords(solr, dids, exclude, count):
             q = solr.Q(doc_id=doc_id)
         else:
             q |= solr.Q(doc_id=doc_id)
-    #opts = { "fields": "text_mlt", "interestingTerms": "list", "match.include": False, "maxqt": 7 }
-    #r = solr.mlt_query(**opts).query(q).paginate(rows=0)
-    #return r.execute().interesting_terms
     field = "text_mlt"
     opts = { "q": q, "rows": 100, "fl": "_", "tv": True, "tv.fl": field, "tv.df": True, "tv.tf": True }
     r = solr.search(**opts)

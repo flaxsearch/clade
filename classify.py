@@ -155,9 +155,18 @@ if __name__ == '__main__':
     
     # FIXME - help message
     
+    def _parse(path):
+        if path.endswith('.xml'):
+            return taxonomy.parse_xml_file(path)
+        elif path.endswith('.csv'):
+            return taxonomy.parse_csv_file(path)
+        else:
+            print 'unrecognized output file extension (use .xml or .csv)'
+            sys.exit(1)
+    
     if sys.argv[1] == 'import':
         with open(settings.taxonomy_path, 'w') as f:
-            taxes = [taxonomy.parse_csv_file(x) for x in sys.argv[2:]]
+            taxes = [_parse(x) for x in sys.argv[2:]]
             cPickle.dump(taxes, f)
             print 'imported', len(taxes), 'taxonomies'
     else:

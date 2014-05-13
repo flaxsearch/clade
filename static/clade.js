@@ -186,7 +186,7 @@ $(function () {
     $("#taxonomies select").combobox();
     $("#taxonomies input").attr("title", "Taxonomy");
     $("#tree").hide();
-    $("#taxonomy, #category, #title").addClass("ui-widget ui-widget-content ui-corner-left ui-corner-right");
+    $("#taxonomy, #category, #title, #io").addClass("ui-widget ui-widget-content ui-corner-left ui-corner-right");
     $("#taxonomies select").combobox("option", "select", taxonomySelectFn);
     // hack the combobox to be non-editable for now
     $("#taxonomies input").attr("readonly", "readonly");
@@ -420,6 +420,12 @@ $(function () {
         }});
     });
 
+    // if there is an import error message, show it
+    if (location.search.length > 0) {
+        alert("Import error\n\n" + decodeURIComponent(location.search.substring(1)));
+        location = "/static/index.html";
+    }
+  
     // display the page, and start in category view mode
     $("#help").addClass("ui-widget ui-widget-content ui-corner-all");
     $("body > div").addClass("catview");

@@ -156,13 +156,14 @@ if __name__ == '__main__':
     # FIXME - help message
     
     def _parse(path):
-        if path.endswith('.xml'):
-            return taxonomy.parse_xml_file(path)
-        elif path.endswith('.csv'):
-            return taxonomy.parse_csv_file(path)
-        else:
-            print 'unrecognized output file extension (use .xml or .csv)'
-            sys.exit(1)
+        with open(path) as f:
+            if path.endswith('.xml'):
+                return taxonomy.parse_xml(f)
+            elif path.endswith('.csv'):
+                return taxonomy.parse_csv(f)
+            else:
+                print 'unrecognized output file extension (use .xml or .csv)'
+                sys.exit(1)
     
     if sys.argv[1] == 'import':
         with open(settings.taxonomy_path, 'w') as f:
@@ -189,9 +190,9 @@ if __name__ == '__main__':
                     else:
                         solr = None
                         rows = None
-                    taxonomy.write_xml_file(f, taxes, _solr=solr, rows=rows)
+                    taxonomy.write_xml(f, taxes, _solr=solr, rows=rows)
                 elif sys.argv[2].endswith('.csv'):
-                    taxonomy.write_csv_file(f, taxes)
+                    taxonomy.write_csv(f, taxes)
                 else:
                     print 'unrecognized output file extension (use .xml or .csv)'
 

@@ -41,13 +41,19 @@ body {
 
 #header a.menu {
 	position: absolute;
-	right: 5px;
 	bottom: 5px;
 	font-size: 14px;
 	color: white;
 	text-decoration: none;
 	font-weight: bold;
 	padding: 2px;
+	right: 5px;
+}
+
+#header button {
+	position: absolute;
+    right: 50px;
+	bottom: 3px;
 }
 
 #header a.flaxlink {
@@ -59,13 +65,6 @@ body {
 	text-decoration: none;
 	font-weight: bold;
 	padding: 2px;
-}
-
-
-#header button {
-	position: absolute;
-	right: 50px;
-	bottom: 3px;
 }
 
 .left {
@@ -100,8 +99,7 @@ body {
     padding-right: 5px;
 }
 
-
-#taxonomies.docview, #taxonomy.docview, #keywords.docview, #suggestions.docview, #documents.docview, #category.docview {
+#taxonomies.docview, #taxonomy.docview, #keywords.docview, #suggestions.docview, #documents.docview, #category.docview, #io.docview {
 	display: none;
 }
 
@@ -128,7 +126,7 @@ body {
 
 #taxonomy {
 	top: 135px;
-	height: 500px;
+	height: 406px;
 	overflow-y: auto;
 }
 
@@ -242,7 +240,7 @@ table.selectable th button, #taxonomyIcons button {
 
 #documents {
 	top: 320px;
-	height: 320px;
+	height: 315px;
 }
 
 #documents table {
@@ -280,7 +278,7 @@ table.selectable th button, #taxonomyIcons button {
 
 #document {
 	top: 255px;
-	height: 375px;
+	height: 380px;
 }
 
 #document h1 {
@@ -334,4 +332,28 @@ table th {
 
 .negative, .negative input {
     text-decoration: line-through;
+}
+
+#io {
+    position: absolute;
+    top: 552px;
+    left: 4px;
+    width: 480px;
+}
+
+#io h1 {
+    font-size: small;
+    font-weight: normal;
+    margin: 4px;
+    padding-left: 4px;
+}
+
+#io form {
+    padding: 4px;
+    border-top: 1px solid lightgrey;
+    margin: 0;
+}
+
+#io input[type=submit] {
+    float: right;
 }

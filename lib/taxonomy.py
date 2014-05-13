@@ -128,42 +128,41 @@ def term_for_path(taxes, term_path):
             return None
     return term
 
-def parse_csv_file(path):
+def parse_csv(f):
     def f_clue(x):
         if x[0] == '-':
             return (x[1:], False)
         return (x, True)
     
     stack = [None] * 100  # should be plenty
-    with open(path) as f:
-        for line in csv.reader(f):
-            # get level
-            for level in xrange(100):
-                if line[level]: break
-            
-            name = line[level]
-            clues = []
-            cluestr = ''
-            try:
-                cluestr = line[level+1]
-            except IndexError:
-                pass
+    for line in csv.reader(f):
+        # get level
+        for level in xrange(100):
+            if line[level]: break
+        
+        name = line[level]
+        clues = []
+        cluestr = ''
+        try:
+            cluestr = line[level+1]
+        except IndexError:
+            pass
 
-            if cluestr:
-                assert cluestr.startswith('clues:')
-                clues = dict(f_clue(x) for x in CSV_RE.split(cluestr[6:]))
+        if cluestr:
+            assert cluestr.startswith('clues:')
+            clues = dict(f_clue(x) for x in CSV_RE.split(cluestr[6:]))
 
-            if level == 0:
-                assert stack[0] == None
-                stack[0] = Term(name, level, clues)
-            else:
-                stack[level] = Term(name, level, clues)
-                stack[level-1].add_child(stack[level])
+        if level == 0:
+            assert stack[0] == None
+            stack[0] = Term(name, level, clues)
+        else:
+            stack[level] = Term(name, level, clues)
+            stack[level-1].add_child(stack[level])
 
     return stack[0]
 
-def parse_xml_file(path):
-    context = etree.iterparse(path, events=("start", "end"))
+def parse_xml(f):
+    context = etree.iterparse(f, events=("start", "end"))
     term = None
     level = 0
     for event, elem in context:
@@ -184,7 +183,7 @@ def parse_xml_file(path):
             level -= 1
     assert False
 
-def write_csv_file(f, taxes):
+def write_csv(f, taxes):
     """ Export a CSV file for the given taxonomies to the (open) file handle
         specified.
         
@@ -209,7 +208,7 @@ def write_csv_file(f, taxes):
     for term in taxes:
         term.walk(f_pre, f_post)
 
-def write_xml_file(f, taxes, _solr=None, rows=0):
+def write_xml(f, taxes, _solr=None, rows=0):
     """ Export an XML file for the given taxonomies to the (open) file handle
         specified.
     

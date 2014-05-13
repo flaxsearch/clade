@@ -26,6 +26,27 @@
             <button id="back" class="menu">Back</button>
             <a href="/static/help.html" class="menu" target="help">Help</a>
         </div>
+        <div id="io">
+            <h1>XML import / export</h1>
+            <form method="POST" enctype="multipart/form-data" action="/import">
+                <input type="file" name="myfile" />
+                <input type="submit" value="Import" />
+            </form>
+            <form method="GET" action="/export" target="export">
+                <select name="rows">
+                    <option value="-1">Do not include count or document elements
+                    <option value="0">Include count but no document elements
+                    <option value="10">Include count and up to 10 document elements
+                    <option value="20">Include count and up to 20 document elements
+                    <option value="50">Include count and up to 50 document elements
+                    <option value="100">Include count and up to 100 document elements
+                    <option value="200">Include count and up to 200 document elements
+                    <option value="500">Include count and up to 500 document elements
+                    <option value="1000">Include count and up to 1000 document elements
+                </select>
+                <input type="submit" value="Export" />
+            </form>
+        </div>
         <div id="taxonomies" class="left">
             <select></select>
             <button id="create">Create</button>

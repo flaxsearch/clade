@@ -16,11 +16,12 @@ import json
 import cPickle
 from lib import web
 from lib import taxonomy
+from StringIO import StringIO
 import sunburnt
 import settings
 import httplib2
 
-urls = ('/ajax/(.*)', 'Ajax', '/*', 'Root')
+urls = ('/ajax/(.*)', 'Ajax', '/*', 'Root', '/import', 'IO', '/export', 'IO')
 app = web.application(urls, globals())
 
 with open(settings.taxonomy_path) as f:
@@ -191,8 +192,35 @@ class Ajax:
             commit()
             return json.dumps({ })
 
-        raise Exception("No such AJAX function: %s" % fn)
+        raise Exception("No such function: %s" % fn)
 
+
+class IO:
+    def POST(self):
+        global taxes
+        with open(settings.taxonomy_path, 'w') as f:
+            try:
+                x = web.input(myfile={})
+                taxes = [taxonomy.parse_xml(x['myfile'].file)]
+                raise web.seeother("/static/index.html")
+            except Exception as e:
+                taxes = []
+                raise web.seeother("/static/index.html?%s" % e.message)
+            finally:
+                cPickle.dump(taxes, f)
+                map_terms()
+
+    def GET(self):
+        xml = StringIO()
+        rows = web.input(rows='-1').rows
+        if rows != '-1':
+            taxonomy.write_xml(xml, taxes, _solr, rows)
+        else:
+            taxonomy.write_xml(xml, taxes)
+        try:
+            return xml.getvalue()
+        finally:
+            xml.close()
 
 class Root:
     def GET(self):

@@ -179,7 +179,17 @@ if __name__ == '__main__':
         if sys.argv[1] == 'export':
             with open(sys.argv[2], 'w') as f:
                 if sys.argv[2].endswith('.xml'):
-                    taxonomy.write_xml_file(f, taxes)
+                    if len(sys.argv) > 3:
+                        solr = _solr
+                        try:
+                            rows = int(sys.argv[3])
+                        except ValueError:
+                            print 'rows value must be integer'
+                            sys.exit(1)
+                    else:
+                        solr = None
+                        rows = None
+                    taxonomy.write_xml_file(f, taxes, _solr=solr, rows=rows)
                 elif sys.argv[2].endswith('.csv'):
                     taxonomy.write_csv_file(f, taxes)
                 else:

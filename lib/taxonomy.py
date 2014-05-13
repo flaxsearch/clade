@@ -167,7 +167,6 @@ def parse_xml_file(path):
     term = None
     level = 0
     for event, elem in context:
-        print event, elem.tag, elem.text, elem.attrib
         if event == 'start' and elem.tag == 'category':
             t = Term(uid=elem.attrib.get('id'), clues={}, level=level)
             if term is not None:
@@ -210,9 +209,12 @@ def write_csv_file(f, taxes):
     for term in taxes:
         term.walk(f_pre, f_post)
 
-def write_xml_file(f, taxes):
+def write_xml_file(f, taxes, _solr=None, rows=0):
     """ Export an XML file for the given taxonomies to the (open) file handle
         specified.
+    
+        If a SOLR connection is supplied, then include document elements for
+        each category.
     
     """
     x = TreeBuilder()
@@ -230,6 +232,17 @@ def write_xml_file(f, taxes):
             x.start("clue", attrs)
             x.data(clue)
             x.end("clue")
+        if _solr is not None:
+            count, docs = get_docs_for_category(_solr, term, rows=rows)
+            x.start("count", {})
+            x.data(str(count))
+            x.end("count")
+            for doc_id, title, score in docs:
+                x.start("doc", { "id": doc_id, "score": str(score) })
+                x.start("name", {})
+                x.data(title)
+                x.end("name")
+                x.end("doc")
     
     def f_post(term):
         x.end("category")
@@ -374,7 +387,7 @@ def get_category_doc_count(_solr, term):
     query = _category_doc_query(_solr, term)
     return query.paginate(rows=0).execute().result.numFound
 
-def get_docs_for_category(_solr, term):
+def get_docs_for_category(_solr, term, rows=10):
     """ Return a tuple (numFound, docs) where numFound is the number of
         documents found in a category, and docs is a list of tuples
         (docid, title, score) for each document in the category.
@@ -383,8 +396,8 @@ def get_docs_for_category(_solr, term):
     query = _category_doc_query(_solr, term)
     if query is None:
         return (0, [])
-    results = query.field_limit(["doc_id", "title"], score=True).paginate(rows=10).execute()
-    return (results.result.numFound, [(doc["doc_id"], doc["title"], doc["score"]) for doc in results])
+    results = query.field_limit(["doc_id", "title"], score=True).paginate(rows=rows).execute()
+    return results.result.numFound, [(doc["doc_id"], doc["title"], doc["score"]) for doc in results]
 
 def get_doc_ids_for_category(_solr, term):
     """ Return doc ids for each document in a category.

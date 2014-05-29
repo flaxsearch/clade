@@ -48,7 +48,7 @@ Installation prerequisites
 
 - Python 2.6 or 2.7
 
-- Solr 4.6
+- Solr 4.6 (also tested with 4.8.1)
     http://www.apache.org/dyn/closer.cgi/lucene/solr/4.6.2
     Other versions may also work, but we have not tested them with Clade.
 

@@ -71,6 +71,16 @@ as appropriate):
     $ export CPPFLAGS=-Qunused-arguments
     $ sudo -E pip install lxml	
 
+-------------------
+Windows quick start
+-------------------
+
+On Windows, you can use the demo.bat file to run all the various parts of Clade with the
+supplied example data. You will need to edit paths.bat to match your configuration first. 
+
+The demo_noclassify.bat file also runs Clade, but doesn't repeat the initial classification 
+to avoid duplicates. If you need it, cleanup.bat clears all the indexes.
+
 ------------
 Example data
 ------------

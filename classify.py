@@ -162,7 +162,7 @@ if __name__ == '__main__':
             elif path.endswith('.csv'):
                 return taxonomy.parse_csv(f)
             else:
-                print 'unrecognized output file extension (use .xml or .csv)'
+                print 'unrecognized input file extension (use .xml or .csv)'
                 sys.exit(1)
     
     if sys.argv[1] == 'import':

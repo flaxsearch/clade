@@ -35,10 +35,9 @@ documents. We plan to improve this for a future release by writing a custom
 Solr plugin.
 
 Documents are stored in a standard Solr index and are categorised dynamically
-as taxonomy nodes are selected. As this is just a proof of concept, there is 
-currently no way of writing the categorisation results to the documents, or
-anywhere else.
-
+as taxonomy nodes are selected. There is currently no way of writing the
+categorisation results to the documents in SOLR, but see below for how to
+export the document categorisation to an XML or CSV file.
 
 --------------------------
 Installation prerequisites
@@ -147,8 +146,47 @@ The Clade UI is implemented as a web application. To start it, run:
 Then point a browser at 
 
     http://localhost:8080/
- 
- 
+    
+    
+----------------------
+Taxonomy import/export
+----------------------
+
+As noted above, the taxonomy may be imported from a CSV file. It is also possible
+to import from an XML file (in a custom format) and to export the taxonomy (and
+optionally the document categorisations) to CSV or XML.
+
+To import from CSV:
+
+    $ python classify.py import taxonomy.csv
+	
+	on Windows:
+	
+    C:\> python classify.py import taxonomy.csv
+
+To import from XML, use the .xml file extension. The extension must be either .csv
+or .xml and is used to determine the type of file read.
+
+To export to CSV:
+
+    $ python classify.py export taxonomy.csv
+	
+	on Windows:
+	
+    C:\> python classify.py export taxonomy.csv
+    
+To export to XML, use the .xml file extension. Again, the extension determines the
+type of file written. In the case of exported to XML, document classifications may
+be written to the file by specifying the number of document ids that should be
+exported per category, e.g.:
+
+    $ python classify.py export taxonomy.xml 100
+	
+	on Windows:
+	
+    C:\> python classify.py export taxonomy.xml 100
+    
+
 -----------
 UI Controls
 -----------
@@ -202,6 +240,12 @@ the dialog box, and click OK.
 
 To delete the current taxonomy, click the Delete button and then OK in the
 confirm dialog.
+
+To import or export the taxonomy, click on Import or Export on the panel below
+the taxonomy tree. You can select the maximum number of document ids to export
+for each category, or you can choose not to export any document ids. When
+importing and exported you can choose CSV or XML files, but the file extension
+must be .csv or .xml to reflect the file type.
 
 
 Document mode

@@ -4,5 +4,5 @@ rem Each must run in its own command line shell
 
 call paths.bat
 
-cd stanford-ner-2011-09-14
+cd stanford-ner-2014-06-16
 server.bat

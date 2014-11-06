@@ -121,12 +121,12 @@ Then [re]start Solr, e.g.:
 Now start the Stanford Named Entity Recognition server, which is used to pull
 names, places etc. out of the source data:
  
-    $ cd stanford-ner-2011-09-14
+    $ cd stanford-ner-2014-06-16
     $ ./server.sh &
 	
 	or on Windows:
 	
-    C:\ cd stanford-ner-2011-09-14
+    C:\ cd stanford-ner-2014-06-16
     C:\ server.bat
 
 Finally, add the example documents (which are provided as plaintext files):

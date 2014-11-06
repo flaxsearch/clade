@@ -5,7 +5,7 @@ rem It is necessary to pause after each one to allow server startup, this is don
 rem 
 
 start cmd.exe /k go1.bat
-ping localhost -n 5 > nul
+ping localhost -n 20 > nul
 start cmd.exe /k go2.bat
-ping localhost -n 2 > nul
+ping localhost -n 15 > nul
 start cmd.exe /k go3.bat CLASSIFY

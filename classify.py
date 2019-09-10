@@ -19,7 +19,6 @@ limitations under the License.
 
 import os
 import re
-#import cPickle
 import pickle
 import csv
 import time
@@ -29,8 +28,8 @@ from lib import xmldoc
 from lib import taxonomy
 from lib import ner
 from lib import csv_unicode
-#import sunburnt
-import pysolr
+
+import scorched
 import httplib2
 
 import settings
@@ -110,14 +109,13 @@ def update_solr(solr, unique_term, title, text):
     doc = {'id': '1'}
     doc = { 'title': title, 'text': text, 'doc_id': unique_term }
     doc['entity'] = tuple(set(x for x in iter_entity_terms(text)))
-    #solr.add([doc])
-    solr.add(doc)
+    #solr.add([doc]) #pysolr
+    solr.add(doc)  #scoched/sunburnt
 
 def iter_entity_terms(text):
     for term in ner.get_entities(settings.ner_host, settings.ner_port, text):
         if len(term) < 50:
             #yield unicode(term, "utf-8")  DEP
-            print('yielding',term)
             yield term
 
 def iter_text_terms(text):

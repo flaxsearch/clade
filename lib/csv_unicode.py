@@ -1,4 +1,5 @@
-import csv, codecs, cStringIO
+import csv, codecs
+from io import StringIO
 
 class UTF8Recoder:
     """
@@ -58,4 +59,3 @@ class UnicodeWriter:
     def writerows(self, rows):
         for row in rows:
             self.writerow(row)
-

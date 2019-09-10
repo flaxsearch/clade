@@ -110,7 +110,8 @@ def update_solr(solr, unique_term, title, text):
     doc = {'id': '1'}
     doc = { 'title': title, 'text': text, 'doc_id': unique_term }
     doc['entity'] = tuple(set(x for x in iter_entity_terms(text)))
-    solr.add([doc])
+    #solr.add([doc])
+    solr.add(doc)
 
 def iter_entity_terms(text):
     for term in ner.get_entities(settings.ner_host, settings.ner_port, text):
@@ -183,9 +184,9 @@ if __name__ == '__main__':
         with open(settings.taxonomy_path, 'rb') as f:
             taxes = pickle.load(f)
 
-        h = httplib2.Http(cache=settings.http_cache)
-        _solr = pysolr.Solr(settings.solr_url, timeout=100)
-        #_solr = sunburnt.SolrInterface(settings.solr_url, http_connection=h) // dep http_cnnection??
+        #h = httplib2.Http(cache=settings.http_cache)
+        #_solr = pysolr.Solr(settings.solr_url, timeout=100)
+        _solr = scorched.SolrInterface(settings.solr_url) #// dep http_cnnection??
 
         if sys.argv[1] == 'export':
             with open(sys.argv[2], 'w') as f:

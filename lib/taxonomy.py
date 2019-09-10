@@ -344,7 +344,7 @@ def calc_score(parsed_text, clue):
     return float(len(matches) * len(clue)) / len(parsed_text)
 
 def _category_doc_query(_solr, term):
-    """ Return a Scorched query for category documents.
+    """ Return a Fed query for category documents.
 
     """
     print("_category_doc_query", term)

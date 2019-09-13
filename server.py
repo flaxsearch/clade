@@ -17,6 +17,7 @@ import pickle
 from lib import web
 from lib import taxonomy
 from io import StringIO
+from io import BytesIO
 #import pysolr
 import scorched
 import settings
@@ -215,7 +216,7 @@ class IO:
 				map_terms()
 
 	def GET(self):
-		xml = StringIO()
+		xml = BytesIO()
 		rows = web.input(rows='-1').rows
 		if rows != '-1':
 			taxonomy.write_xml(xml, taxes, _solr, rows)

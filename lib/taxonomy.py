@@ -400,7 +400,7 @@ def get_docs_for_category(_solr, term, rows=10):
     query = _category_doc_query(_solr, term)
     if query is None:
         return (0, [])
-    results = query.field_limit(["doc_id", "title"], score=True).paginate(rows=rows).execute()
+    results = query.field_limit(["doc_id", "title"], score=True).paginate(rows=int(rows)).execute()
     return results.result.numFound, [(doc["doc_id"], doc["title"], doc["score"]) for doc in results]
 
 def get_doc_ids_for_category(_solr, term):

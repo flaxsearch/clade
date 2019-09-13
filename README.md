@@ -54,6 +54,7 @@ Installation prerequisites
 - Python modules
     scorched:   https://github.com/lugensa/scorched
     lxml:       http://pypi.python.org/pypi/lxml/
+    pyjq:       https://github.com/doloopwhile/pyjq
 
 
 Download the latest versions from these sites and follow the installation
@@ -108,7 +109,7 @@ Solr home, e.g.:
 
 Then [re]start Solr, e.g.:
 
-    $ cd apache-solr-4.6.2/example
+      $ cd apache-solr-4.6.2/example
     $ java -jar start.jar &
 
 	on Windows:

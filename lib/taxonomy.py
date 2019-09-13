@@ -16,6 +16,7 @@ import csv
 import re
 import string
 import json
+import pyjq
 from xml.etree.ElementTree import ElementTree
 from xml.etree.ElementTree import TreeBuilder
 from lxml import etree
@@ -432,14 +433,17 @@ def suggest_keywords(solr, dids, exclude, count):
         else:
             q |= solr.Q(doc_id=doc_id)
     field = "text_mlt"
-    opts = { "q": q, "rows": 3, "fl": "_", "tv": True, "tv.fl": field, "tv.df": True, "tv.tf": True }
+    opts = { "q": q, "rows": 100, "fl": "_", "tv": True, "tv.fl": field, "tv.df": True, "tv.tf": True }
     r = solr.search(**opts)
     #root = etree.fromstring(r.original_xml)
     orig_json = r.original_json
-    print(orig_json)
     root = json.loads(orig_json)
-    #print(root['response'][0])
 
+    # The below should work, but we get a compile error from jq.
+    # result = pyjq.all('.termVectors | to_entries | group_by(.key/4 | floor) | map(map(.value))[][] | select(type == "array") | {docid:.[1],terms:(.[3]|to_entries|group_by(.key/2|floor) | map(map(.value)))} | {docid,terms:[.terms[]|{term:.[0],tf:.[1][1],df:.[1][3]}]}',root)
+    result = pyjq.all('.termVectors | to_entries | group_by(.key/4 | floor) | map(map(.value))[][] | select(type == "array") | {docid:.[1],terms:(.[3]|to_entries|group_by(.key/2|floor) | map(map(.value)))}',root)
+
+    # Manually parse out the last bits since the above full jq doesn't work down below.
     tvEl = root['termVectors'][0]   # this should be the primary key
     # find the term vectors info
     #tvEl = root.xpath('/response/lst[@name="termVectors"]')[0]
@@ -457,6 +461,28 @@ def suggest_keywords(solr, dids, exclude, count):
     # for each doc element...
     keywords = {}
     totalL = 0
+    for docEl in result:
+#    for docEl in tvEl.xpath('lst[@name!="warnings"]'):
+        #doc_id = docEl.xpath('str[@name="uniqueKey"]')[0].text
+        doc_id = docEl['docid']
+        #keywordList = docEl.xpath('lst[@name="%s"]/lst' % field)
+        keywordList = docEl['terms']
+        L = len(keywordList)
+        totalL += L
+        for keywordEl in keywordList:
+            #keyword = keywordEl.attrib["name"]
+            keyword = keywordEl[0]
+    #        print('keyword',keyword)
+            if keyword in exclude or len(keyword) < 5:
+                continue
+            #n = int(keywordEl.xpath('int[@name="df"]')[0].text)
+            n = int(keywordEl[1][3])
+            #wdf = int(keywordEl.xpath('int[@name="tf"]')[0].text)
+            wdf = int(keywordEl[1][1])
+    #        print("n ", n, ' wdf', wdf)
+            if keyword not in keywords:
+                keywords[keyword] = [n, []]
+            keywords[keyword][1].append((wdf, L))
 
     keywords = [(keyword, n, m) for keyword, (n, m) in keywords.items()]
     avgL = float(totalL) / R
@@ -468,5 +494,5 @@ def suggest_keywords(solr, dids, exclude, count):
             v += 2 * wdf / (Ld + wdf)
         return v * float(r) * log((r+0.5)*(N-R-n+r+0.5)/((R-r+0.5)*(n-r+0.5)))
     keywords.sort(key=lambda k: wt(k[1], k[2]), reverse=True)
-    #print keywords
+    #print ('Keywords:',keywords)
     return [k[0] for k in keywords[:count]]

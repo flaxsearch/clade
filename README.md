@@ -55,6 +55,7 @@ Installation prerequisites
     scorched:   https://github.com/lugensa/scorched
     lxml:       http://pypi.python.org/pypi/lxml/
     pyjq:       https://github.com/doloopwhile/pyjq
+    httplib2
 
 
 Download the latest versions from these sites and follow the installation

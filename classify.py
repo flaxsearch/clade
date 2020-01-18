@@ -81,6 +81,7 @@ def process_dir_text(solr, dir):
                 #name = name.decode('utf8', 'ignore') # dep  Getting a message this doesn't exist
                 #text = text.decode('utf8')
                 docid = '%s.%s' % (docidbase, count)
+                print(docid)
                 update_solr(solr, docid, name, text)
 
     solr.commit()
@@ -106,10 +107,11 @@ def process_csv(solr, path):
 
 def update_solr(solr, unique_term, title, text):
     print ('updating', unique_term, title)
-    doc = {'id': '1'}
+    # not needed? 'id': '1',
     doc = { 'title': title, 'text': text, 'doc_id': unique_term }
     doc['entity'] = tuple(set(x for x in iter_entity_terms(text)))
     #solr.add([doc]) #pysolr
+    #print(doc)
     solr.add(doc)  #scoched/sunburnt
 
 def iter_entity_terms(text):

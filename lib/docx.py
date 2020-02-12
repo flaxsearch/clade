@@ -1,11 +1,11 @@
 # Copyright 2012 Lemur Consulting Limited
-# 
+#
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
-# 
+#
 #    http://www.apache.org/licenses/LICENSE-2.0
-# 
+#
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import zipfile
-from StringIO import StringIO
+from io import StringIO
 from lxml import etree
 import sys
 
@@ -22,12 +22,12 @@ NSMAIN = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main'
 
 def parse_docx(path):
     """Return ([analysts], service number, document text, document title).
-    
+
     """
     analysts = []
     service_number = None
 
-    mydoc = zipfile.ZipFile(path)    
+    mydoc = zipfile.ZipFile(path)
     doc = etree.parse(mydoc.open('word/settings.xml'))
     els = doc.xpath("//w:docVar[@w:name='dvMetaData']", namespaces={'w':NSMAIN})
     if els:
@@ -38,7 +38,7 @@ def parse_docx(path):
         els = doc.xpath("//analysts")
         if els:
             analysts = [x.strip() for x in els[0].text.split(';')]
-    
+
         els = doc.xpath("//service_number")
         if els:
             service_number = int(els[0].text)
@@ -52,7 +52,7 @@ def parse_docx(path):
             for para in el:
                 paratext=[]
                 for el2 in para.iter():
-                    if (el2.tag == '{%s}instrText' % NSMAIN and 
+                    if (el2.tag == '{%s}instrText' % NSMAIN and
                         'DocTitle' in el2.text):
                         doctitle = True
 
@@ -71,9 +71,9 @@ def parse_docx(path):
 
     return analysts, service_number, '\n\n'.join(paratextlist), doctitle
 
-    
+
 if __name__ == '__main__':
     import os
     for f in os.listdir(sys.argv[1]):
         if f.endswith('.docx'):
-            print f, parse_docx(os.path.join(sys.argv[1], f))[3]
+            print (f, parse_docx(os.path.join(sys.argv[1], f))[3])

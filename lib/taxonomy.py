@@ -1,11 +1,11 @@
 # Copyright 2012 Lemur Consulting Limited
-# 
+#
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
-# 
+#
 #    http://www.apache.org/licenses/LICENSE-2.0
-# 
+#
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -15,6 +15,8 @@
 import csv
 import re
 import string
+import json
+import pyjq
 from xml.etree.ElementTree import ElementTree
 from xml.etree.ElementTree import TreeBuilder
 from lxml import etree
@@ -53,48 +55,49 @@ class Term(object):
     def add_child(self, child):
         self.children.append(child)
         child.parent = self
-    
+
     def create_child(self, name):
         child = Term(name, self.level + 1, None)
         self.add_child(child)
         return child
-        
+
     def iter_clues(self):
-        for clue in self._clues.iteritems():
+        #for clue in self._clues.iteritems():
+        for clue in self._clues.items():
             yield clue
-        
+
     def set_clue(self, clue, positive=True):
         self._clues[clue] = positive
 
     def toggle_clue(self, clue):
         self._clues[clue] = not self._clues[clue]
-    	
+
     def delete_clue(self, clue):
         if clue in self._clues:
             del self._clues[clue]
-    
+
     def display(self):
         """Display this Term and all its descendants.
-        
+
         """
-        print '%s%s: %s' % ('  ' * self.level, self.name, self.clues)
+        print ('%s%s: %s' % ('  ' * self.level, self.name, self.clues))
         for c in self.children:
             c.display()
-    
+
     def __str__(self):
         """Return the path to this Term from the root as a string.
-        
+
         """
         l = []
         while self:
             l.append(self.name)
-            self = self.parent        
+            self = self.parent
         return '/'.join(l[::-1])
-    
+
     def walk(self, f_pre=None, f_post=None):
         """ Walk the tree, calling f_pre(self) and f_post(self) before and after
             calling on each child.
-        
+
         """
         if f_pre is not None:
             f_pre(self)
@@ -102,7 +105,7 @@ class Term(object):
             c.walk(f_pre, f_post)
         if f_post is not None:
             f_post(self)
-    
+
     def for_jtree(self, solr):
         count = get_category_doc_count(solr, self)
         word = "document" if count == 1 else "documents"
@@ -133,13 +136,13 @@ def parse_csv(f):
         if x[0] == '-':
             return (x[1:], False)
         return (x, True)
-    
+
     stack = [None] * 100  # should be plenty
     for line in csv.reader(f):
         # get level
-        for level in xrange(100):
+        for level in range(100):
             if line[level]: break
-        
+
         name = line[level]
         clues = []
         cluestr = ''
@@ -186,13 +189,13 @@ def parse_xml(f):
 def write_csv(f, taxes):
     """ Export a CSV file for the given taxonomies to the (open) file handle
         specified.
-        
+
     """
     write_csv_file.level = 0
     def f_clue(clue, positive):
         sign = '' if positive else '-'
         return '%s%s' % (sign, clue)
-    
+
     def f_pre(term):
         for _ in xrange(write_csv_file.level):
             f.write(',')
@@ -201,24 +204,24 @@ def write_csv(f, taxes):
         f.write(' '.join([f_clue(clue, positive) for clue, positive in term.iter_clues()]))
         f.write('"\r\n')
         write_csv_file.level += 1
-                    
+
     def f_post(term):
         write_csv_file.level -= 1
-    
+
     for term in taxes:
         term.walk(f_pre, f_post)
 
 def write_xml(f, taxes, _solr=None, rows=0):
     """ Export an XML file for the given taxonomies to the (open) file handle
         specified.
-    
+
         If a SOLR connection is supplied, then include document elements for
         each category.
-    
+
     """
     x = TreeBuilder()
     x.start("taxonomy", {})
-    
+
     def f_pre(term):
         x.start("category", { "id": str(term.uid) })
         x.start("name", {})
@@ -242,26 +245,26 @@ def write_xml(f, taxes, _solr=None, rows=0):
                 x.data(title)
                 x.end("name")
                 x.end("doc")
-    
+
     def f_post(term):
         x.end("category")
-        
+
     for term in taxes:
         term.walk(f_pre, f_post)
 
     x.end("taxonomy")
-    
+
     xml = ElementTree(x.close())
     xml.write(f, xml_declaration=True, encoding="utf-8")
 
 def classify_doc(text, tax):
     """ Classify some document text using the supplied taxonomy tree(s). Return
         a list of (Term, score) ordered by score.
-    
+
     """
     results = []
     parsed_text = parse_text(text)
-    
+
     def calc(term):
         count = 0
         total = 0.0
@@ -270,24 +273,24 @@ def classify_doc(text, tax):
             count += 1
             m = 1 if p else -1 #FIXME: is this correct?
             total += m * calc_score(parsed_text, parsed_clue)
-        
+
         total = total / count       # normalisation(?)
         results.append((term, total))
-    
+
     if isinstance(tax, Term):
         tax.walk(calc)              # walk a single taxonomy
     else:
         for t in tax:               # walk several taxonomies
             t.walk(calc)
-    
+
     return sorted((x for x in results if x[1]),        # remove zero scores
                   key=lambda x: x[1], reverse=True)
 
 def write_classification(solr, f, taxes):
     """ Export document classifications in CSV format:
-    
+
         doc id, doc title, category id, category name
-    
+
     """
     out = csv.writer(f)
     first = 0
@@ -307,24 +310,24 @@ def parse_text(text):
     """Return a dict of word (lowercase) -> [positions]. Where there are
     periods, add 10 to the position so that phrases do not match across
     sentences etc (crude but should work).
-    
+
     """
     pos = 0
     ret = {}
-    
+
     for tok in RE_WORD_DELIM.findall(text):
         if tok in DELIMS:
             pos += 10
         else:
             pos += 1
             ret.setdefault(tok.lower(), []).append(pos)
-    
+
     return ret
 
 def calc_score(parsed_text, clue):
     """Calculate a score for text parsed with parse_text() and a clue (as an
     iterable).
-    
+
     """
 
     # match whole phrases, score len(phrase) x tf
@@ -338,13 +341,15 @@ def calc_score(parsed_text, clue):
             if pos + 1 in newmatches:
                 tmp.append(pos + 1)
         matches = tmp
-    
+
     return float(len(matches) * len(clue)) / len(parsed_text)
-    
+
 def _category_doc_query(_solr, term):
-    """ Return a sunburnt query for category documents.
-    
+    """ Return a Fed query for category documents.
+
     """
+    print("_category_doc_query", term)
+
     assert isinstance(term, Term)
 
     pos = None
@@ -365,7 +370,7 @@ def _category_doc_query(_solr, term):
                 neg = q
             else:
                 neg |= q
-                
+
     if pos is not None:
         if neg is not None:
             query = pos & ~neg
@@ -381,7 +386,7 @@ def _category_doc_query(_solr, term):
 
 def get_category_doc_count(_solr, term):
     """ Return the number of documents in the category.
-    
+
     """
     query = _category_doc_query(_solr, term)
     return query.paginate(rows=0).execute().result.numFound
@@ -390,17 +395,17 @@ def get_docs_for_category(_solr, term, rows=10):
     """ Return a tuple (numFound, docs) where numFound is the number of
         documents found in a category, and docs is a list of tuples
         (docid, title, score) for each document in the category.
-    
+
     """
     query = _category_doc_query(_solr, term)
     if query is None:
         return (0, [])
-    results = query.field_limit(["doc_id", "title"], score=True).paginate(rows=rows).execute()
+    results = query.field_limit(["doc_id", "title"], score=True).paginate(rows=int(rows)).execute()
     return results.result.numFound, [(doc["doc_id"], doc["title"], doc["score"]) for doc in results]
 
 def get_doc_ids_for_category(_solr, term):
     """ Return doc ids for each document in a category.
-    
+
     """
     query = _category_doc_query(_solr, term)
     if query is None:
@@ -417,7 +422,7 @@ from math import log
 
 def suggest_keywords(solr, dids, exclude, count):
     """ Return suggested terms for a set of document IDs.
-    
+
     """
     if len(dids) == 0:
         return []
@@ -430,35 +435,56 @@ def suggest_keywords(solr, dids, exclude, count):
     field = "text_mlt"
     opts = { "q": q, "rows": 100, "fl": "_", "tv": True, "tv.fl": field, "tv.df": True, "tv.tf": True }
     r = solr.search(**opts)
-    root = etree.fromstring(r.original_xml)
+    #root = etree.fromstring(r.original_xml)
+    orig_json = r.original_json
+    root = json.loads(orig_json)
+
+    # The below should work, but we get a compile error from jq.
+    # result = pyjq.all('.termVectors | to_entries | group_by(.key/4 | floor) | map(map(.value))[][] | select(type == "array") | {docid:.[1],terms:(.[3]|to_entries|group_by(.key/2|floor) | map(map(.value)))} | {docid,terms:[.terms[]|{term:.[0],tf:.[1][1],df:.[1][3]}]}',root)
+    result = pyjq.all('.termVectors | to_entries | group_by(.key/4 | floor) | map(map(.value))[][] | select(type == "array") | {docid:.[1],terms:(.[3]|to_entries|group_by(.key/2|floor) | map(map(.value)))}',root)
+
+    # Manually parse out the last bits since the above full jq doesn't work down below.
+    tvEl = root['termVectors'][0]   # this should be the primary key
     # find the term vectors info
-    tvEl = root.xpath('/response/lst[@name="termVectors"]')[0]
+    #tvEl = root.xpath('/response/lst[@name="termVectors"]')[0]
     # echo any warnings
-    for warnEl in tvEl.xpath('lst[@name="warnings"]/arr'):
-        msg = warnEl.attrib["name"]
-        field = warnEl.xpath('str')[0].text
-        print "WARNING: '%s' for field '%s'" % (msg, field)
-        
+    print('checking warnings not supported  ')
+    field = root['termVectors'][1]
+    #for warnEl in tvEl.xpath('lst[@name="warnings"]/arr'):
+    #    msg = warnEl.attrib["name"]
+    #    field = warnEl.xpath('str')[0].text
+    #    print ("WARNING: '%s' for field '%s'" % (msg, field))
+
     N = num_docs(solr)
-    R = int(root.xpath('/response/result[@name="response"]')[0].attrib["numFound"])
+    #R = int(root.xpath('/response/result[@name="response"]')[0].attrib["numFound"])
+    R = int(root['response']['numFound'])
     # for each doc element...
     keywords = {}
     totalL = 0
-    for docEl in tvEl.xpath('lst[@name!="warnings"]'):
-        doc_id = docEl.xpath('str[@name="uniqueKey"]')[0].text
-        keywordList = docEl.xpath('lst[@name="%s"]/lst' % field)
+    for docEl in result:
+#    for docEl in tvEl.xpath('lst[@name!="warnings"]'):
+        #doc_id = docEl.xpath('str[@name="uniqueKey"]')[0].text
+        doc_id = docEl['docid']
+        #keywordList = docEl.xpath('lst[@name="%s"]/lst' % field)
+        keywordList = docEl['terms']
         L = len(keywordList)
         totalL += L
         for keywordEl in keywordList:
-            keyword = keywordEl.attrib["name"]
+            #keyword = keywordEl.attrib["name"]
+            keyword = keywordEl[0]
+    #        print('keyword',keyword)
             if keyword in exclude or len(keyword) < 5:
                 continue
-            n = int(keywordEl.xpath('int[@name="df"]')[0].text)
-            wdf = int(keywordEl.xpath('int[@name="tf"]')[0].text)
+            #n = int(keywordEl.xpath('int[@name="df"]')[0].text)
+            n = int(keywordEl[1][3])
+            #wdf = int(keywordEl.xpath('int[@name="tf"]')[0].text)
+            wdf = int(keywordEl[1][1])
+    #        print("n ", n, ' wdf', wdf)
             if keyword not in keywords:
                 keywords[keyword] = [n, []]
             keywords[keyword][1].append((wdf, L))
-    keywords = [(keyword, n, m) for keyword, (n, m) in keywords.iteritems()]
+
+    keywords = [(keyword, n, m) for keyword, (n, m) in keywords.items()]
     avgL = float(totalL) / R
     def wt(n, m):
         r = len(m)
@@ -468,6 +494,5 @@ def suggest_keywords(solr, dids, exclude, count):
             v += 2 * wdf / (Ld + wdf)
         return v * float(r) * log((r+0.5)*(N-R-n+r+0.5)/((R-r+0.5)*(n-r+0.5)))
     keywords.sort(key=lambda k: wt(k[1], k[2]), reverse=True)
-    #print keywords
+    #print ('Keywords:',keywords)
     return [k[0] for k in keywords[:count]]
-

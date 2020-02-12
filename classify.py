@@ -19,7 +19,7 @@ limitations under the License.
 
 import os
 import re
-import cPickle
+import pickle
 import csv
 import time
 
@@ -28,7 +28,8 @@ from lib import xmldoc
 from lib import taxonomy
 from lib import ner
 from lib import csv_unicode
-import sunburnt
+
+import scorched
 import httplib2
 
 import settings
@@ -44,29 +45,29 @@ LINKWORDS = set(('and', 'of', 'the'))
 def process_dir(solr, dir):
     """ Process the .docx files in dir, using the supplied taxonomies to
         classify them, and storing the results in the xapian index.
-    
+
     """
     def f(arg, dirname, names):
         for name in names:
             if name.lower().endswith('.docx'):
                 process_file(solr, os.path.join(dirname, name))
-    
+
     os.path.walk(dir, f, None)
     solr.commit()
 
 def process_dir_xml(solr, dir):
     """ Process the .xml files in dir, using the supplied taxonomies to
         classify them, and storing the results in the xapian index.
-    
+
     """
     def f(arg, dirname, names):
         for name in names:
             if name.lower().endswith('.xml'):
                 process_xml_file(solr, os.path.join(dirname, name))
-    
+
     os.path.walk(dir, f, None)
     solr.commit()
-    
+
 def process_dir_text(solr, dir):
     """ Process the text files in dir, etc.
     """
@@ -75,41 +76,49 @@ def process_dir_text(solr, dir):
         if name[0] != '.':
             with open(os.path.join(dir, name)) as f:
                 text = f.read()
-                name = name.decode('utf8', 'ignore')
+                #print('naame:',name)
+                #print(text)
+                #name = name.decode('utf8', 'ignore') # dep  Getting a message this doesn't exist
+                #text = text.decode('utf8')
                 docid = '%s.%s' % (docidbase, count)
-                update_solr(solr, docid, name, text.decode('utf8'))
-    
+                print(docid)
+                update_solr(solr, docid, name, text)
+
     solr.commit()
 
 def process_file(solr, file):
     _, _, text, title = docx.parse_docx(file)
     filename = os.path.basename(file)
-    update_solr(solr, filename, title or filename, text)                
+    update_solr(solr, filename, title or filename, text)
     solr.commit()
 
 def process_xml_file(solr, file):
     _, _, text, title = xmldoc.parse_xml(file)
     filename = os.path.basename(file)
-    update_solr(solr, filename, title or filename, text)                
+    update_solr(solr, filename, title or filename, text)
     solr.commit()
 
 def process_csv(solr, path):
     with open(path) as f:
         for line in csv_unicode.UnicodeReader(f):
             text = "%s\n\n%s" % (line[0], line[1])
-            update_solr(solr, line[2], line[6] or 'no title', text)                
+            update_solr(solr, line[2], line[6] or 'no title', text)
     solr.commit()
 
 def update_solr(solr, unique_term, title, text):
-    print 'updating', unique_term, title
+    print ('updating', unique_term, title)
+    # not needed? 'id': '1',
     doc = { 'title': title, 'text': text, 'doc_id': unique_term }
     doc['entity'] = tuple(set(x for x in iter_entity_terms(text)))
-    solr.add(doc)
-            
+    #solr.add([doc]) #pysolr
+    #print(doc)
+    solr.add(doc)  #scoched/sunburnt
+
 def iter_entity_terms(text):
     for term in ner.get_entities(settings.ner_host, settings.ner_port, text):
         if len(term) < 50:
-            yield unicode(term, "utf-8")
+            #yield unicode(term, "utf-8")  DEP
+            yield term
 
 def iter_text_terms(text):
     phrase = []
@@ -144,17 +153,18 @@ def iter_text_terms(text):
 
 def get_doctext(solr, did):
     """ Return the text for a document ID.
-    
+
     """
     return solr.query(doc_id=did).execute()[0]["text"]
 
-    
+
 if __name__ == '__main__':
     import sys
-    import cPickle
-    
+    #import cPickle
+    import pickle
+
     # FIXME - help message
-    
+
     def _parse(path):
         with open(path) as f:
             if path.endswith('.xml'):
@@ -162,20 +172,21 @@ if __name__ == '__main__':
             elif path.endswith('.csv'):
                 return taxonomy.parse_csv(f)
             else:
-                print 'unrecognized input file extension (use .xml or .csv)'
+                print ('unrecognized input file extension (use .xml or .csv)')
                 sys.exit(1)
-    
-    if sys.argv[1] == 'import':
-        with open(settings.taxonomy_path, 'w') as f:
-            taxes = [_parse(x) for x in sys.argv[2:]]
-            cPickle.dump(taxes, f)
-            print 'imported', len(taxes), 'taxonomies'
-    else:
-        with open(settings.taxonomy_path) as f:
-            taxes = cPickle.load(f)
 
-        h = httplib2.Http(cache=settings.http_cache)
-        _solr = sunburnt.SolrInterface(settings.solr_url, http_connection=h)
+    if sys.argv[1] == 'import':
+        with open(settings.taxonomy_path, 'wb') as f:
+            taxes = [_parse(x) for x in sys.argv[2:]]
+            pickle.dump(taxes, f)
+            print ('imported', len(taxes), 'taxonomies')
+    else:
+        with open(settings.taxonomy_path, 'rb') as f:
+            taxes = pickle.load(f)
+
+        #h = httplib2.Http(cache=settings.http_cache)
+        #_solr = pysolr.Solr(settings.solr_url, timeout=100)
+        _solr = scorched.SolrInterface(settings.solr_url) #// dep http_cnnection??
 
         if sys.argv[1] == 'export':
             with open(sys.argv[2], 'w') as f:
@@ -185,7 +196,7 @@ if __name__ == '__main__':
                         try:
                             rows = int(sys.argv[3])
                         except ValueError:
-                            print 'rows value must be integer'
+                            print ('rows value must be integer')
                             sys.exit(1)
                     else:
                         solr = None
@@ -194,37 +205,37 @@ if __name__ == '__main__':
                 elif sys.argv[2].endswith('.csv'):
                     taxonomy.write_csv(f, taxes)
                 else:
-                    print 'unrecognized output file extension (use .xml or .csv)'
+                    print ('unrecognized output file extension (use .xml or .csv)')
 
         elif sys.argv[1] == 'lscat':
             tax = taxonomy.term_for_path(taxes, sys.argv[2])
             if tax:
-                print 'tax:', tax
+                print ('tax:', tax)
                 for doc in taxonomy.get_docs_for_category(_solr, tax):
-                    print doc
+                    print (doc)
             else:
-                print 'no matching taxonomy'
+                print ('no matching taxonomy')
 
         elif sys.argv[1] == 'classify':
             with open(sys.argv[2], 'w') as f:
                 taxonomy.write_classification(_solr, f, taxes)
 
         elif sys.argv[1] == 'doctext':
-            print get_doctext(_solr, int(sys.argv[2]))
+            print (get_doctext(_solr, int(sys.argv[2])))
 
         elif sys.argv[1] == 'suggest':
             for term in taxonomy.suggest_keywords(_solr, sys.argv[2:], [], 7):
-                print term
+                print (term)
 
         elif sys.argv[1] == 'docdir':
             process_dir(_solr, sys.argv[2])
 
         elif sys.argv[1] == 'xmldocdir':
             process_dir_xml(_solr, sys.argv[2])
-        
+
         elif sys.argv[1] == 'docfile':
             process_file(_solr, sys.argv[2])
-   
+
         elif sys.argv[1] == 'csvfile':
             process_csv(_solr, sys.argv[2])
 
